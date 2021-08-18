@@ -11,57 +11,35 @@
                     <table id="example" class="display" style="width:100%">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Nama</th>
-                                <th>Username</th>
-                                <th>Karyawan</th>
+                                <th>Nip</th>
+                                <th>Pangkat/Gol</th>
+                                <th>Jabatan</th>
+                                <th>Unit Kerja</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                        
+                        <?php 
+                            $no = 1;
+                            foreach($karyawan as $item){ 
+                        ?>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
+                            <td><?php echo $no++ ?></td>
+                            <td><?php echo $item->name ?></td>
+                            <td><?php echo $item->nip ?></td>
+                            <td><?php echo $item->golongan ?></td>
+                            <td><?php echo $item->jabatan ?></td>
+                            <td><?php echo $item->unit_kerja ?></td>
+                            <td class="text-center">
+                                <a class="badge badge-primary" href="<?php echo base_url(); ?>atasan/masterkaryawan/edit_karyawan/<?php echo $item->id; ?>" > <i class="fa  fa-edit" > </i> Edit </a><br>
+                                <a class="badge badge-danger" id="btn-hapus" href="<?php echo base_url(); ?>atasan/masterkaryawan/hapus/<?php echo $item->id; ?>"> <i class="fa fa-trash"> </i> Delete </a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                        </tr>
-                        <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                        </tr>
-                        <tr>
-                            <td>Cedric Kelly</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                        </tr>
-                        <tr>
-                            <td>Airi Satou</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                        </tr>
-                        <tr>
-                            <td>Brielle Williamson</td>
-                            <td>Integration Specialist</td>
-                            <td>New York</td>
-                        </tr>
-                        <tr>
-                            <td>Herrod Chandler</td>
-                            <td>Sales Assistant</td>
-                            <td>San Francisco</td>
-                        </tr>
-                        <tr>
-                            <td>Rhona Davidson</td>
-                            <td>Integration Specialist</td>
-                            <td>Tokyo</td>
-                        </tr>
-                        <tr>
-                            <td>Colleen Hurst</td>
-                            <td>Javascript Developer</td>
-                            <td>San Francisco</td>
-                        </tr>
+                        <?php } ?>
+                        
                         </tbody>
                     </table>
                 </div>

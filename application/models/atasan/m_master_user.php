@@ -14,11 +14,11 @@ class M_master_user extends CI_Model {
     }
     
     function jabatan(){
-        return $this->db->get('jabatan');
+        return $this->db->get('m_jabatan');
     }
     
     function golongan(){
-        return $this->db->get('golongan');
+        return $this->db->get('m_golongan');
     }
 
     function input_user($data,$table){

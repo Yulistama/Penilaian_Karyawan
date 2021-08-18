@@ -34,7 +34,7 @@ class MasterGolongan extends CI_Controller {
         );
 
         $this->m_master_golongan->input_golongan($data,'m_golongan');
-		    redirect('atasan/mastergolongan');
+		redirect('atasan/mastergolongan');
     }
 
     public function edit_golongan($id)

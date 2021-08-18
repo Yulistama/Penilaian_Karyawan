@@ -192,14 +192,14 @@
                                     <br>
 
                                     <div class="row">
-                                    <div class="col-md-3">
+                                    <!-- <div class="col-md-3">
                                         <b> <br></b> 
                                         <input  type="text" name="pwaktu1" class="form-control" placeholder="Persen Waktu" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
                                         <input  type="text" name="pbiaya1" class="form-control" placeholder="Persen Biaya" readonly></input>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="col-md-3">
                                         <b> <br></b> 
                                         <input  type="text" name="waktu1x" class="form-control" placeholder="Waktu" ></input>
