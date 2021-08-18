@@ -6,62 +6,32 @@
         </h1>
         <div class="col-md-12">
             <div class="row" style="background: white; padding: 10px">
-                <div class="col" style="margin-bottom: 20px; margin-top:10px"><a class="btn btn-sm btn-success mb-3" href="#" style="padding: 10px 15px"><i class="fa fa-plus"></i> Tambah Data </a></div>
+                <div class="col" style="margin-bottom: 20px; margin-top:10px"><a class="btn btn-sm btn-success mb-3" href="<?php echo base_url(); ?>atasan/masterjabatan/add_jabatan" style="padding: 10px 15px"><i class="fa fa-plus"></i> Tambah Data </a></div>
                 <div class="col">
                     <table id="example" class="display" style="width:100%">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Nama</th>
-                                <th>Username</th>
-                                <th>Jabatan</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+
+                        <?php 
+                            $no = 1;
+                            foreach($jabatan as $item){ 
+                        ?>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
+                            <td><?php echo $no++ ?></td>
+                            <td><?php echo $item->name?></td>
+                            <td class="text-center">
+                                <a class="badge badge-primary" href="<?php echo base_url(); ?>atasan/masterjabatan/edit_jabatan/<?php echo $item->id; ?>" > <i class="fa  fa-edit" > </i> Edit </a><br>
+                                <a class="badge badge-danger" id="btn-hapus" href="<?php echo base_url(); ?>atasan/masterjabatan/hapus/<?php echo $item->id; ?>"> <i class="fa fa-trash"> </i> Delete </a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                        </tr>
-                        <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                        </tr>
-                        <tr>
-                            <td>Cedric Kelly</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                        </tr>
-                        <tr>
-                            <td>Airi Satou</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                        </tr>
-                        <tr>
-                            <td>Brielle Williamson</td>
-                            <td>Integration Specialist</td>
-                            <td>New York</td>
-                        </tr>
-                        <tr>
-                            <td>Herrod Chandler</td>
-                            <td>Sales Assistant</td>
-                            <td>San Francisco</td>
-                        </tr>
-                        <tr>
-                            <td>Rhona Davidson</td>
-                            <td>Integration Specialist</td>
-                            <td>Tokyo</td>
-                        </tr>
-                        <tr>
-                            <td>Colleen Hurst</td>
-                            <td>Javascript Developer</td>
-                            <td>San Francisco</td>
-                        </tr>
+                        <?php } ?>
+                        
                         </tbody>
                     </table>
                 </div>

@@ -33,21 +33,22 @@
                         <li>
                             <a class="<?= current_url() == base_url('atasan/useraktif') ? 'active-menu' : ''?>" href="<?= base_url('atasan/useraktif') ?>"><i class="fa fa-user"></i> User Aktif</a>
                         </li>
-                        <li class="<?php if( (current_url() == base_url('atasan/masteruser'))           || 
-                                             (current_url() == base_url('atasan/mastergolongan'))        || 
-                                             (current_url() == base_url('atasan/masterjabatan'))         || 
-                                             (current_url() == base_url('atasan/masterkaryawan'))        || 
-                                             (current_url() == base_url('atasan/masteruser/add_user'))   ||
-                                             (current_url() == base_url("atasan/masteruser/edit_user/$id")) 
+                        <li class="<?php if( (current_url() == base_url('atasan/masteruser'))                   || 
+                                             (current_url() == base_url('atasan/mastergolongan'))               || 
+                                             (current_url() == base_url('atasan/masterjabatan'))                || 
+                                             (current_url() == base_url('atasan/masterkaryawan'))               || 
+                                             (current_url() == base_url('atasan/masteruser/add_user'))          ||
+                                             (current_url() == base_url('atasan/mastergolongan/add_golongan'))
+                                            //  (current_url() == base_url("atasan/masteruser/edit_user/$id")) 
                                             ) 
                                             {?> active <?php } ?>">
                             <a href="#"><i class="fa fa-sitemap"></i> Master Data<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="<?php if((current_url() == base_url('atasan/masteruser')) || (current_url() == base_url('atasan/masteruser/add_user')) || (current_url() == base_url("atasan/masteruser/edit_user/$id")) ){ ?> active-menu <?php } ?>" href="<?= base_url('atasan/masteruser') ?>"><i class="fa fa-plus-square"></i>User</a>
+                                    <a class="<?php if((current_url() == base_url('atasan/masteruser')) || (current_url() == base_url('atasan/masteruser/add_user')) ){ ?> active-menu <?php } ?>" href="<?= base_url('atasan/masteruser') ?>"><i class="fa fa-plus-square"></i>User</a>
                                 </li>
                                 <li>
-                                    <a class="<?= current_url() == base_url('atasan/mastergolongan') ? 'active-menu' : ''?>" href="<?= base_url('atasan/mastergolongan') ?>"><i class="fa fa-plus-square"></i>Golongan</a>
+                                    <a class="<?php if((current_url() == base_url('atasan/mastergolongan')) || (current_url() == base_url('atasan/mastergolongan/add_golongan')) ){ ?> active-menu <?php } ?>" href="<?= base_url('atasan/mastergolongan') ?>"><i class="fa fa-plus-square"></i>Golongan</a>
                                 </li>
                                 <li>
                                     <a class="<?= current_url() == base_url('atasan/masterjabatan') ? 'active-menu' : ''?>" href="<?= base_url('atasan/masterjabatan') ?>"><i class="fa fa-plus-square"></i>Jabatan</a>
