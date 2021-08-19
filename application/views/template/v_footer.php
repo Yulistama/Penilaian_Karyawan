@@ -27,6 +27,8 @@
 <!-- Custom Js -->
 <script src="<?= base_url('assets/'); ?>js/custom-scripts.js"></script>
 
+<script src="<?= base_url('assets/'); ?>js/bootstrap-datepicker.min.js"></script>
+
 
 
 <!-- alert -->

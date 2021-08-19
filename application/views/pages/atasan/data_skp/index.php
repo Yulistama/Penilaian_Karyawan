@@ -20,14 +20,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php 
+                            $no = 1;
+                            foreach($data_skp as $item){ 
+                        ?>
                         <tr>
-                            <td>1</td>
-                            <td>Zainal Arifin</td>
-                            <td>196708072013091001</td>
-                            <td>Pengatur Muda Tk.I (II/b)</td>
-                            <td>Fungsional Umum</td>
-                            <td> Inspektorat Daerah Kabupaten OKU</td>
+                            <td><?php echo $no++ ?></td>
+                            <td><?php echo $item->nama_dinilai ?></td>
+                            <td><?php echo $item->nip_dinilai ?></td>
+                            <td><?php echo $item->pangkat_dinilai ?></td>
+                            <td><?php echo $item->jabatan_dinilai ?></td>
+                            <td><?php echo $item->unit_kerja_dinilai ?></td>
+                            
                         </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                 </div>

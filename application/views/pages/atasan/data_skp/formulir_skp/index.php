@@ -80,8 +80,9 @@
                                 <li class="" style="width:14%; list-style-type: none;">SPT DP3 Horinzon</li>
                             </ul>
                         </div>
-
                         <div class="col-md-12" style="margin-top: 50px; padding-left: 50px; padding-right:50px">
+                            <?php var_dump($sessionskp)?>
+                            <?php var_dump($sessionformulir)?>
                             <div class="row">
                                 <div class="col-12" style="border: solid 1px black; padding:5px 5px 5px 5px">
                                     <div class="row">
@@ -114,12 +115,12 @@
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
                             <div class="row">
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
-                                    <form method="post" action="<?= base_url('atasan/dataskp/add_pengukuran_capa')?>">
+                                    <form method="post" action="<?= base_url('atasan/dataskp/v_add_formulir')?>">
 
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Kode Formulir </b> 
-                                                <input  type="text" name="kdformulir" class="form-control" placeholder="Kode"></input>
+                                                <input  type="text" name="kode_formulir" class="form-control" placeholder="Kode"></input>
                                             </div>
                                         </div>
                                         
@@ -127,19 +128,19 @@
                                         <div class="row">
                                             <div class="col-md-3" style="font-size: small;">
                                                 <b> Target Menerima Surat Masuk </b> 
-                                                <input  type="text" name="kuant1" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="kual1" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="waktu1" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" name="waktu_surat_masuk" class="form-control" placeholder="Waktu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="biaya1" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" name="biaya_surat_masuk" class="form-control" placeholder="Biaya" ></input>
                                             </div>
                                         </div>
                                         <br>
@@ -147,19 +148,19 @@
                                         <div class="row">
                                             <div class="col-md-3" style="font-size: small;">
                                                 <b>Target Mendistribusikan Surat </b> 
-                                                <input  type="text" name="kuant5" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="kual5" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="waktu5" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="biaya5" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya" ></input>
                                             </div>
                                         </div>
                                         <br>
@@ -168,19 +169,19 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Kode Surat </b> 
-                                                <input  type="text" name="kuant2" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="kual2" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="waktu2" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" name="waktu_kode_surat" class="form-control" placeholder="Waktu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="biaya2" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" name="biaya_kode_surat" class="form-control" placeholder="Biaya" ></input>
                                             </div>
                                         </div>
 
@@ -188,38 +189,38 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Memberi No Agenda </b> 
-                                                <input  type="text" name="kuant3" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="kual3" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="waktu3" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" name="waktu_no_agenda" class="form-control" placeholder="Waktu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="biaya3" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" name="biaya_no_agenda" class="form-control" placeholder="Biaya" ></input>
                                             </div>
                                         </div>
                                         <br>
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Memberi No Surat </b> 
-                                                <input  type="text" name="kuant4" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" name="kuant_no_surat" class="form-control" placeholder="Kuant/Output" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="kual4" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" name="kual_no_surat" class="form-control" placeholder="Kual/Mutu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="waktu4" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" name="waktu_no_surat" class="form-control" placeholder="Waktu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="biaya4" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" name="biaya_no_surat" class="form-control" placeholder="Biaya" ></input>
                                             </div>
                                         </div>
 
@@ -228,19 +229,19 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Arsipan Surat </b> 
-                                                <input  type="text" name="kuant6" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" name="kuant_arsip_surat" class="form-control" placeholder="Kuant/Output" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b><br> </b> 
-                                                <input  type="text" name="kual6" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" name="kual_arsip_surat" class="form-control" placeholder="Kual/Mutu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="waktu6" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" name="waktu_arsip_surat" class="form-control" placeholder="Waktu" ></input>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" name="biaya6" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" name="biaya_arsip_surat" class="form-control" placeholder="Biaya" ></input>
                                             </div>
                                         </div>
                                         <br>

@@ -142,9 +142,11 @@
                             </div>    
                         </div>
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
+                        <?php var_dump($sessionskp)?>
+                        <?php var_dump($sessionprilaku_kerja)?>
                             <div class="row">
                             <div class="col-md-12" style="border: solid 1px gray; padding:50px">
-                                <form method="post" action="<?= base_url('atasan/dataskp/add_penilaian_kerja')?>">
+                                <form method="post" action="<?= base_url('atasan/dataskp/v_add_prilaku_kerja')?>">
 
                                     <div class="row">
                                         <div class="col-md-12" style="border: 1px solid black; padding: 20px;">
@@ -161,7 +163,7 @@
                                     <div class="row" style="margin-top: 20px">
                                         <div class="col-md-3">
                                             <b>Orientasi Pelayanan </b> 
-                                            <input  type="text" name="orientas" class="form-control" placeholder="Orientasi Pelayanan" =""></input>
+                                            <input  type="text" name="orientasi" class="form-control" placeholder="Orientasi Pelayanan" =""></input>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Integritas</b> 

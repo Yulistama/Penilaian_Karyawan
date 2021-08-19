@@ -82,6 +82,8 @@
                         </div>
 
                         <div class="col-md-12" style="margin-top: 50px; padding-left: 50px; padding-right:50px">
+                        <?php var_dump($sessionskp)?>
+                                <?php var_dump($session_cover)?>
                             <div class="row">
                                 <div class="col-12" style="border: solid 1px black; padding:5px 5px 5px 5px">
                                     <div class="row">
@@ -97,52 +99,29 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
+                                
                             <div class="row">
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
-                                <form method="post" action="<?= base_url('atasan/dataskp/add_formulir')?>">
+                                <form method="post" action="<?= base_url('atasan/dataskp/v_add_cover')?>">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <b>Kode Jangka Waktu Penilaian </b> 
-                                            <input  type="text" name="kd_cover" class="form-control" placeholder="Kode" ></input>
+                                            <input  type="text" name="kode_jangka_penilaian" class="form-control" placeholder="Masukan Kode Jangka Waktu Penilaian" ></input>
                                         </div>
                                         <div class="col-md-4">
                                             <b>Jangka Waktu Penilaian </b> 
-                                            <input  type="text" name="jangka" class="form-control" placeholder="Jangka Waktu Penilaian" ></input>
+                                            <input  type="text" name="jangka_waktu" class="form-control" placeholder="Masukan Jangka Waktu Penilaian" ></input>
                                         </div>
                                         <div class="col-md-4">
-                                            <b>Tahun </b> 
-                                            <input  type="text" name="tahun" class="form-control" placeholder="Tahun" ></input>
+                                            <b>Tahun </b>
+                                            <select class="form-control" id="tahun" name="tahun">
+                                                <?php for($i=date('Y'); $i>=date('Y')-32; $i-=1) { ?>
+                                                    <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                                                <?php } ?>
+                                            </select> 
                                         </div>
-                                        <!-- <div class="col-md-3">
-                                            <b>Nama yang dinilai </b> 
-                                            <input  type="text" name="nm_yd" class="form-control" placeholder="Nama" ></input>
-                                        </div> -->
                                     </div>
                                     <br>
-
-                                    <div class="row">
-                                        
-                                        <!-- <div class="col-md-4">
-                                            <b>Nip </b> 
-                                            <input  type="text" name="nip_yd" class="form-control" placeholder="Nip" readonly="" ></input>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <b>Pangkat / Golongan Ruang </b> 
-                                            <input  type="text" name="pangkat_yd" class="form-control" placeholder="Pangkat / Golongan Ruang" readonly=""></input>
-                                        </div> -->
-                                    </div>
-                                    <br>
-                                    <!-- <div class="row">
-                                        <div class="col-md-6">
-                                            <b>Jabatan </b> 
-                                            <input  type="text" name="jabatan_yd" class="form-control" placeholder="Jabatan" readonly="" ></input>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <b>Unit Kerja </b> 
-                                            <input  type="text" name="unit_yd" class="form-control" placeholder="Unit Kerja" readonly="" ></input>
-                                        </div>
-                                    </div>
-                                    <br> -->
 
                                     <div class="row">
                                         <div class="col-12" style="text-align: center">

@@ -83,84 +83,86 @@
 
                         <div class="col-md-12" style="margin-top: 50px; padding-left: 50px; padding-right:50px">
                             <div class="row">
+                                <?php var_dump($sessionskp)?>
+                                <?php var_dump($session_dataskp)?>
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <div class="row">
-                                        <form method="post" action="<?= base_url('atasan/dataskp/add_cover')?>">
+                                        <form method="post" action="<?= base_url('atasan/dataskp/v_add_dataskp')?>">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <b>Nama yang dinilai </b>
-                                                    <input type="text" name="nama_yd" class="form-control" placeholder="Nama"></input>
+                                                    <input type="text" name="nama" class="form-control" placeholder="Masukan Nama"></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Nip </b>
-                                                    <input type="text" name="nip_yd" class="form-control" placeholder="Nip"></input>
+                                                    <input type="text" name="nip" class="form-control" placeholder="Masukan Nip"></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Pangkat / Golongan Ruang </b>
-                                                    <input type="text" name="pangkat_yd" class="form-control" placeholder="Pangkat / Golongan Ruang"></input>
+                                                    <input type="text" name="golongan" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang"></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <b>Jabatan </b>
-                                                    <input type="text" name="jabatan_yd" class="form-control" placeholder="Jabatan"></input>
+                                                    <input type="text" name="jabatan" class="form-control" placeholder="Masukan Jabatan"></input>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <b>Unit Kerja </b>
-                                                    <input type="text" name="unitkerja_yd" class="form-control" placeholder="Unit Kerja"></input>
+                                                    <input type="text" name="unitkerja" class="form-control" placeholder="Masukan Unit Kerja"></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <b>Nama Pejabat Penilai </b>
-                                                    <input type="text" name="nama_pp" class="form-control" placeholder="Nama"></input>
+                                                    <input type="text" name="nama_pp" class="form-control" placeholder="Masukan Nama"></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Nip </b>
-                                                    <input type="text" name="nip_pp" class="form-control" placeholder="Nip"></input>
+                                                    <input type="text" name="nip_pp" class="form-control" placeholder="Masukan Nip"></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Pangkat / Golongan Ruang </b>
-                                                    <input type="text" name="pangkat_pp" class="form-control" placeholder="Pangkat / Golongan Ruang"></input>
+                                                    <input type="text" name="pangkat_pp" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang"></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <b>Jabatan </b>
-                                                    <input type="text" name="jabatan_pp" class="form-control" placeholder="Jabatan"></input>
+                                                    <input type="text" name="jabatan_pp" class="form-control" placeholder="Masukan Jabatan"></input>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <b>Unit Kerja </b>
-                                                    <input type="text" name="unitkerja_pp" class="form-control" placeholder="Unit Kerja"></input>
+                                                    <input type="text" name="unitkerja_pp" class="form-control" placeholder="Masukan Unit Kerja"></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <b>Nama Atasan Pejabat Penilai </b>
-                                                    <input type="text" name="nama_app" class="form-control" placeholder="Nama"></input>
+                                                    <input type="text" name="nama_app" class="form-control" placeholder="Masukan Nama"></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Nip </b>
-                                                    <input type="text" name="nip_app" class="form-control" placeholder="Nip"></input>
+                                                    <input type="text" name="nip_app" class="form-control" placeholder="Masukan Nip"></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Pangkat / Golongan Ruang </b>
-                                                    <input type="text" name="pangkat_app" class="form-control" placeholder="Pangkat / Golongan Ruang"></input>
+                                                    <input type="text" name="pangkat_app" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang"></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <b>Jabatan </b>
-                                                    <input type="text" name="jabatan_app" class="form-control" placeholder="Jabatan"></input>
+                                                    <input type="text" name="jabatan_app" class="form-control" placeholder="Masukan Jabatan"></input>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <b>Unit Kerja </b>
-                                                    <input type="text" name="unitkerja_app" class="form-control" placeholder="Unit Kerja"></input>
+                                                    <input type="text" name="unitkerja_app" class="form-control" placeholder="Masukan Unit Kerja"></input>
                                                 </div>
                                             </div>
                                             <br>

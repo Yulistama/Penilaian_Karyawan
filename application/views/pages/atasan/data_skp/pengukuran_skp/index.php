@@ -127,556 +127,283 @@
                             </div>    
                         </div>
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
+                        <?php var_dump($sessionskp)?>
+                        <?php var_dump($sessionpengukuran)?>
                             <div class="row">
                             <div class="col-md-12" style="border: solid 1px gray; padding:50px">
-                                <form method="post" action="<?= base_url('atasan/dataskp/add_prilaku_kerja')?>">
+                                <form method="post" action="<?= base_url('atasan/dataskp/v_add_pengukuran')?>">
 
-                                    <!-- <div class="row">
-                                    <div class="col-md-3">
-                                        <b>Kode Jangka Waktu Penilaian </b> 
-                                        <input  type="text" name="kd_cover" class="form-control" placeholder="Kode" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b>Jangka Waktu Penilaian </b> 
-                                        <input  type="text" name="jangka" class="form-control" placeholder="Jangka Waktu Penilaian" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b>Tahun </b> 
-                                        <input  type="text" name="tahun" class="form-control" placeholder="Tahun" readonly="" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b>Kode Formulir </b> 
-                                        <input  type="text" name="kdformulir" class="form-control" placeholder="Kode"></input>
-                                    </div>
-                                    </div>
-                                    <br> -->
-
-                                    <!-- <div class="row">
-                                    <div class="col-md-3">
-                                        <b> Target Menerima Surat Masuk </b> 
-                                        <input  type="text" name="kuant1" class="form-control" placeholder="Kuant/Output" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kual1" class="form-control" placeholder="Kual/Mutu" readonlyreadonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu1" class="form-control" placeholder="Waktu" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya1" class="form-control" placeholder="Biaya" readonly=""></input>
-                                    </div>
-                                    </div>
-
-                                    <br> -->
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Surat Masuk </b> 
-                                        <input  type="text" name="kuant1r" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual1r" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu1r" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_surat_masuk" class="form-control" placeholder="Waktu" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya1r" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_surat_masuk" class="form-control" placeholder="Biaya" ></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <div class="row">
-                                    <!-- <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pwaktu1" class="form-control" placeholder="Persen Waktu" readonly></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pbiaya1" class="form-control" placeholder="Persen Biaya" readonly></input>
-                                    </div> -->
-                                    <!-- <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu1x" class="form-control" placeholder="Waktu" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya1x" class="form-control" placeholder="Biaya" ></input>
-                                    </div> -->
-                                    </div>
-                                    <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kuantitas1" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_surat_masuk" class="form-control" placeholder="Kualitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kualitas1" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_surat_masuk" class="form-control" placeholder="Kuantitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan1" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_surat_masuk" class="form-control" placeholder="Perhitungan" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp1" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_surat_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <!-- <div class="row">
-                                    <div class="col-md-3">
-                                        <b>Target Kode Surat </b> 
-                                        <input  type="text" name="kuant2" class="form-control" placeholder="Kuant/Output" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kual2" class="form-control" placeholder="Kual/Mutu" readonlyreadonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu2" class="form-control" placeholder="Waktu" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya2" class="form-control" placeholder="Biaya" readonly=""></input>
-                                    </div>
-                                    </div>
-                                    <br> -->
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Kode Surat</b> 
-                                        <input  type="text" name="kuant2r" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual2r" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu2r" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_kode_surat" class="form-control" placeholder="Waktu" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya2r" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_kode_surat" class="form-control" placeholder="Biaya" ></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <div class="row">
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pwaktu2" class="form-control" placeholder="Persen Waktu" readonly></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pbiaya2" class="form-control" placeholder="Persen Biaya" readonly></input>
-                                    </div>
-                                    <!-- <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu2x" class="form-control" placeholder="Waktu" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya2x" class="form-control" placeholder="Biaya" ></input>
-                                    </div> -->
-                                    </div>
-                                    <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kuantitas2" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_kode_surat" class="form-control" placeholder="Kualitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kualitas2" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_kode_surat" class="form-control" placeholder="Kuantitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan2" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_kode_surat" class="form-control" placeholder="Perhitungan" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp2" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_kode_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
                                     </div>
                                     </div>
-
                                     <br>
-                                    <!-- <div class="row">
-                                    <div class="col-md-3">
-                                        <b>Target Memberi No Agenda </b> 
-                                        <input  type="text" name="kuant3" class="form-control" placeholder="Kuant/Output" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kual3" class="form-control" placeholder="Kual/Mutu" readonlyreadonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu3" class="form-control" placeholder="Waktu" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya3" class="form-control" placeholder="Biaya" readonly="" ></input>
-                                    </div>
-                                    </div>
-                                    <br> -->
+                                    
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi No Agenda </b> 
-                                        <input  type="text" name="kuant3r" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual3r" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu3r" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_no_agenda" class="form-control" placeholder="Waktu" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya3r" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_no_agenda" class="form-control" placeholder="Biaya" ></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <div class="row">
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pwaktu3" class="form-control" placeholder="Persen Waktu" readonly ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pbiaya3" class="form-control" placeholder="Persen Biaya" readonly ></input>
-                                    </div>
-                                    <!-- <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu3x" class="form-control" placeholder="Waktu" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya3x" class="form-control" placeholder="Biaya" ></input>
-                                    </div> -->
-                                    </div>
-                                    <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kuantitas3" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_no_agenda" class="form-control" placeholder="Kualitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kualitas3" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_no_agenda" class="form-control" placeholder="Kuantitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan3" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_no_agenda" class="form-control" placeholder="Perhitungan" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp3" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_no_agenda" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <!-- <div class="row">
-                                    <div class="col-md-3">
-                                        <b>Target Memberi No Surat </b> 
-                                        <input  type="text" name="kuant4" class="form-control" placeholder="Kuant/Output" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kual4" class="form-control" placeholder="Kual/Mutu" readonlyreadonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu4" class="form-control" placeholder="Waktu" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya4" class="form-control" placeholder="Biaya" readonly=""></input>
-                                    </div>
-                                    </div>
-                                    <br> -->
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi No Masuk </b> 
-                                        <input  type="text" name="kuant4r" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_no_masuk" class="form-control" placeholder="Kuant/Output" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual4r" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_no_masuk" class="form-control" placeholder="Kual/Mutu" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu4r" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_no_masuk" class="form-control" placeholder="Waktu" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya4r" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_no_masuk" class="form-control" placeholder="Biaya" ></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <div class="row">
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pwaktu4" class="form-control" placeholder="Persen Waktu" readonly ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pbiaya4" class="form-control" placeholder="Persen Biaya" readonly ></input>
-                                    </div>
-                                    <!-- <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu4x" class="form-control" placeholder="Waktu" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya4x" class="form-control" placeholder="Biaya" ></input>
-                                    </div> -->
-                                    </div>
-                                    <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kuantitas4" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_no_masuk" class="form-control" placeholder="Kualitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kualitas4" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_no_masuk" class="form-control" placeholder="Kuantitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan4" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_no_masuk" class="form-control" placeholder="Perhitungan" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp4" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_no_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
                                     </div>
                                     </div>
-
                                     <br>
-                                    <!-- <div class="row">
-                                    <div class="col-md-3">
-                                        <b>Target Mendistribusikan Surat </b> 
-                                        <input  type="text" name="kuant5" class="form-control" placeholder="Kuant/Output" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kual5" class="form-control" placeholder="Kual/Mutu" readonlyreadonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu5" class="form-control" placeholder="Waktu" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya5" class="form-control" placeholder="Biaya" readonly=""></input>
-                                    </div>
-                                    </div>
-                                    <br> -->
+                                    
                                     <div class="row">
                                     <div class="col-md-3" style="font-size: small;">
                                         <b> Realisasi Mendistribusi Surat</b> 
-                                        <input  type="text" name="kuant5r" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual5r" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu5r" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya5r" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya" ></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <div class="row">
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pwaktu5" class="form-control" placeholder="Persen Waktu" readonly ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pbiaya5" class="form-control" placeholder="Persen Biaya" readonly ></input>
-                                    </div>
-                                    <!-- <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu5x" class="form-control" placeholder="Waktu" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya5x" class="form-control" placeholder="Biaya" ></input>
-                                    </div> -->
-                                    </div>
-                                    <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kuantitas5" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_distribusi_surat" class="form-control" placeholder="Kualitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kualitas5" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_distribusi_surat" class="form-control" placeholder="Kuantitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan5" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_distribusi_surat" class="form-control" placeholder="Perhitungan" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp5" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_distribusi_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
                                     </div>
                                     </div>
                                     <br>
 
-                                    <!-- <div class="row">
-                                    <div class="col-md-3">
-                                        <b>Target Arsipan Surat </b> 
-                                        <input  type="text" name="kuant6" class="form-control" placeholder="Kuant/Output" readonly="" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b><br> </b> 
-                                        <input  type="text" name="kual6" class="form-control" placeholder="Kual/Mutu" readonlyreadonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu6" class="form-control" placeholder="Waktu" readonly=""></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya6" class="form-control" placeholder="Biaya" readonly=""></input>
-                                    </div>
-                                    </div>
-                                    <br> -->
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Arsipan </b> 
-                                        <input  type="text" name="kuant6r" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_arsipan" class="form-control" placeholder="Kuant/Output" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual6r" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_arsipan" class="form-control" placeholder="Kual/Mutu" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu6r" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_arsipan" class="form-control" placeholder="Waktu" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya6r" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_arsipan" class="form-control" placeholder="Biaya" ></input>
                                     </div>
                                     </div>
                                     <br>
 
                                     <div class="row">
                                     <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pwaktu6" class="form-control" placeholder="Persen Waktu" readonly ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pbiaya6" class="form-control" placeholder="Persen Biaya" readonly ></input>
-                                    </div>
-                                    <!-- <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="waktu16x" class="form-control" placeholder="Waktu" ></input>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b> <br></b> 
-                                        <input  type="text" name="biaya6x" class="form-control" placeholder="Biaya" ></input>
-                                    </div> -->
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                    <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kuantitas6" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_arsipan" class="form-control" placeholder="Kualitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kualitas6" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_arsipan" class="form-control" placeholder="Kuantitas" ></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan6" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_arsipan" class="form-control" placeholder="Perhitungan" readonly></input>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp6" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_arsipan" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
                                     </div>
                                     </div>
                                     <br>
-                                    <!-- <div class="row">
-                                    <div class="col-md-4">
-                                        <b> Kode Pengukuran </b> 
-                                        <input  type="text" name="kdpengukuran" class="form-control" placeholder="Kode" ></input>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaicapaianskp" class="form-control" placeholder="Nilai Capaian SKP" readonlyreadonly=""></input>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <b> <br></b> 
-                                        <input  type="text" name="pnilaicapaianskp" class="form-control" placeholder="" ></input>
-                                    </div>
-                                    </div>
-                                    <br> -->
+                                    
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Pemeriksaan Reguler </b> 
-                                        <input  type="text" name="tt1" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" name="pemeriksaan_regular" class="form-control" placeholder="Surat" ></input>
                                     </div>
-                                    <!-- <div class="col-md-2">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kk1" class="form-control" placeholder="Surat" ></input>
-                                    </div> -->
+                                    
                                     <div class="col-md-3">
                                         <b> Tindak Lanjut </b> 
-                                        <input  type="text" name="tt2" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" name="tindak_lanjut" class="form-control" placeholder="Surat" ></input>
                                     </div>
-                                    <!-- <div class="col-md-2">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kk2" class="form-control" placeholder="Surat" ></input>
-                                    </div> -->
+                                    
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" name="ttk1" class="form-control" placeholder="" readonly></input>
+                                        <input  type="text" name="total1" class="form-control" placeholder="" readonly></input>
                                     </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Operator Komputer </b> 
-                                        <input  type="text" name="tt3" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" name="operator_komputer" class="form-control" placeholder="Surat" ></input>
                                     </div>
-                                    <!-- <div class="col-md-2">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kk3" class="form-control" placeholder="Surat" ></input>
-                                    </div> -->
+                                    
                                     <div class="col-md-3">
                                         <b> Kreatifitas </b> 
-                                        <input  type="text" name="tt4" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" name="kreatifitas" class="form-control" placeholder="Surat" ></input>
                                     </div>
-                                    <!-- <div class="col-md-2">
-                                        <b> <br></b> 
-                                        <input  type="text" name="kk4" class="form-control" placeholder="Surat" ></input>
-                                    </div> -->
+                                    
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" name="ttk2" class="form-control" placeholder="" readonly></input>
+                                        <input  type="text" name="total2" class="form-control" placeholder="" readonly></input>
                                     </div>
                                     </div>
                                     <br>
