@@ -105,6 +105,154 @@ class DataSKP extends CI_Controller {
         $this->load->view('template/v_footer');
     }
     // e.tampil form
+
+    // s.tampil edit form
+    public function edit_skp($id)
+    {
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/edit_skp', $data);
+        $this->load->view('template/v_footer');
+    }
+
+    public function edit_data_skp($id)
+    {
+        $where = $id;
+		$data['data_skp'] = $this->m_dataskp->data_skp_by_id($where);
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/data_skp/edit', $data);
+        $this->load->view('template/v_footer');
+    }
+
+    public function edit_cover($id)
+    {
+        $where = $id;
+		$data['data_cover'] = $this->m_dataskp->data_cover_by_id($where);
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/cover/edit', $data);
+        $this->load->view('template/v_footer');
+    }
+    
+    public function edit_formulir($id)
+    {
+        $where = $id;
+		$data['data_formulir'] = $this->m_dataskp->data_formulir_by_id($where);
+
+        $distribusi_surat = null;
+        $surat_masuk = null;
+        $kode_surat = null;
+        $no_agenda = null;
+        $no_surat = null;
+        $arsip = null;
+
+        foreach($data['data_formulir'] as $item){
+            $distribusi_surat = $item->target_mendistribusikan_surat;
+            $surat_masuk = $item->target_menerima_surat_masuk;
+            $kode_surat = $item->target_kode_surat;
+            $no_agenda = $item->target_memberi_no_agenda;
+            $no_surat = $item->target_memberi_no_surat;
+            $arsip = $item->target_arsipan_surat;
+        }
+        
+        $data['distribusi_surat'] = json_decode($distribusi_surat);
+        $data['surat_masuk'] = json_decode($surat_masuk);
+        $data['kode_surat'] = json_decode($kode_surat);
+        $data['no_agenda'] = json_decode($no_agenda);
+        $data['no_surat'] = json_decode($no_surat);
+        $data['arsip'] = json_decode($arsip);
+
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/formulir_skp/edit', $data);
+        $this->load->view('template/v_footer');
+    }
+    
+    public function edit_pengukuran($id)
+    {
+        $where = $id;
+		$data['data_pengukuran'] = $this->m_dataskp->data_pengukuran_by_id($where);
+
+        $realisasi_mendistribusi_surat = null;
+        $realisasi_surat_masuk = null;
+        $realisasi_kode_surat = null;
+        $realisasi_no_agenda = null;
+        $realisasi_no_masuk = null;
+        $realisasi_arsipan = null;
+
+        foreach($data['data_pengukuran'] as $item)
+        {
+            $realisasi_mendistribusi_surat  = $item->realisasi_mendistribusi_surat;
+            $realisasi_surat_masuk  = $item->realisasi_surat_masuk;
+            $realisasi_kode_surat  = $item->realisasi_kode_surat;
+            $realisasi_no_agenda  = $item->realisasi_no_agenda;
+            $realisasi_no_masuk  = $item->realisasi_no_masuk;
+            $realisasi_arsipan  = $item->realisasi_arsipan;
+        }
+
+        $data['realisasi_mendistribusi_surat'] = json_decode($realisasi_mendistribusi_surat);
+        $data['realisasi_surat_masuk'] = json_decode($realisasi_surat_masuk);
+        $data['realisasi_kode_surat'] = json_decode($realisasi_kode_surat);
+        $data['realisasi_no_agenda'] = json_decode($realisasi_no_agenda);
+        $data['realisasi_no_masuk'] = json_decode($realisasi_no_masuk);
+        $data['realisasi_arsipan'] = json_decode($realisasi_arsipan);
+
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/pengukuran_skp/edit', $data);
+        $this->load->view('template/v_footer');
+    }
+    
+    public function edit_prilaku_kerja($id)
+    {
+        $where = $id;
+		$data['data_prilakukerja'] = $this->m_dataskp->data_prilakukerja_by_id($where);
+
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/prilaku_kinerja/edit', $data);
+        $this->load->view('template/v_footer');
+    }
+    
+    public function edit_penilaian_kerja($id)
+    {
+        $where = $id;
+		$data['data_penilaian'] = $this->m_dataskp->data_penilaian_by_id($where);
+
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/penilaian_kerja/edit', $data);
+        $this->load->view('template/v_footer');
+    }
+    
+    public function edit_spt($id)
+    {
+        $where = $id;
+		$data['data_spt'] = $this->m_dataskp->data_spt_by_id($where);
+
+        $title['title'] = 'Web Penilaian Kinerja Karyawan';
+        $data['id'] = $id;
+        $this->load->view('template/v_header' , $title);
+        $this->load->view('template/v_sidebar');
+        $this->load->view('pages/atasan/data_skp/spt_dp3/edit', $data);
+        $this->load->view('template/v_footer');
+    }
+    // e.tampil edit form
     
     // s.submit form
     public function v_add_dataskp()
@@ -198,7 +346,7 @@ class DataSKP extends CI_Controller {
         }
 
         $this->session->set_userdata('id_skp', $id_skp);
-        $this->session->set_userdata('id_dataskp', $id_dataskp);
+        $this->session->set_userdata('id_dataskp', $id_dataskp); 
 	    redirect('atasan/dataskp/add_cover');
     }
 
@@ -262,82 +410,83 @@ class DataSKP extends CI_Controller {
 
     public function v_add_formulir()
     {
-        $kode_formulir                                      = $this->input->post('kode_formulir');
+        $kode_formulir            = $this->input->post('kode_formulir');
 
-        $kuant_surat_masuk['kuant_surat_masuk']             = $this->input->post('kuant_surat_masuk');
-        $kual_surat_masuk['kual_surat_masuk']               = $this->input->post('kual_surat_masuk');
-        $waktu_surat_masuk['waktu_surat_masuk']             = $this->input->post('waktu_surat_masuk');
-        $biaya_surat_masuk['biaya_surat_masuk']             = $this->input->post('biaya_surat_masuk');
+        $kuant_surat_masuk        = $this->input->post('kuant_surat_masuk');
+        $kual_surat_masuk         = $this->input->post('kual_surat_masuk');
+        $waktu_surat_masuk        = $this->input->post('waktu_surat_masuk');
+        $biaya_surat_masuk        = $this->input->post('biaya_surat_masuk');
 
-        $kuant_distribusi_surat['kuant_distribusi_surat']   = $this->input->post('kuant_distribusi_surat');
-        $kual_distribusi_surat['kual_distribusi_surat']     = $this->input->post('kual_distribusi_surat');
-        $waktu_distribusi_surat['waktu_distribusi_surat']   = $this->input->post('waktu_distribusi_surat');
-        $biaya_distribusi_surat['biaya_distribusi_surat']   = $this->input->post('biaya_distribusi_surat');
+        $kuant_distribusi_surat   = $this->input->post('kuant_distribusi_surat');
+        $kual_distribusi_surat    = $this->input->post('kual_distribusi_surat');
+        $waktu_distribusi_surat   = $this->input->post('waktu_distribusi_surat');
+        $biaya_distribusi_surat   = $this->input->post('biaya_distribusi_surat');
 
-        $kuant_kode_surat['kuant_kode_surat']               = $this->input->post('kuant_kode_surat');
-        $kual_kode_surat['kual_kode_surat']                 = $this->input->post('kual_kode_surat');
-        $waktu_kode_surat['waktu_kode_surat']               = $this->input->post('waktu_kode_surat');
-        $biaya_kode_surat['biaya_kode_surat']               = $this->input->post('biaya_kode_surat');
+        $kuant_kode_surat         = $this->input->post('kuant_kode_surat');
+        $kual_kode_surat          = $this->input->post('kual_kode_surat');
+        $waktu_kode_surat         = $this->input->post('waktu_kode_surat');
+        $biaya_kode_surat         = $this->input->post('biaya_kode_surat');
 
-        $kuant_no_anggenda['kuant_no_anggenda']               = $this->input->post('kuant_no_anggenda');
-        $kual_no_anggenda['kual_no_anggenda']                 = $this->input->post('kual_no_anggenda');
-        $waktu_no_anggenda['waktu_no_anggenda']               = $this->input->post('waktu_no_anggenda');
-        $biaya_no_anggenda['biaya_no_anggenda']               = $this->input->post('biaya_no_anggenda');
+        $kuant_no_agenda          = $this->input->post('kuant_no_agenda');
+        $kual_no_agenda           = $this->input->post('kual_no_agenda');
+        $waktu_no_agenda          = $this->input->post('waktu_no_agenda');
+        $biaya_no_agenda          = $this->input->post('biaya_no_agenda');
 
-        $kuant_no_surat['kuant_no_surat']                   = $this->input->post('kuant_no_surat');
-        $kual_no_surat['kual_no_surat']                     = $this->input->post('kual_no_surat');
-        $waktu_no_surat['waktu_no_surat']                   = $this->input->post('waktu_no_surat');
-        $biaya_no_surat['biaya_no_surat']                   = $this->input->post('biaya_no_surat');
-        $biaya_no_surat['biaya_no_surat']                   = $this->input->post('biaya_no_surat');
+        $kuant_no_surat           = $this->input->post('kuant_no_surat');
+        $kual_no_surat            = $this->input->post('kual_no_surat');
+        $waktu_no_surat           = $this->input->post('waktu_no_surat');
+        $biaya_no_surat           = $this->input->post('biaya_no_surat');
+        $biaya_no_surat           = $this->input->post('biaya_no_surat');
 
-        $kuant_arsip_surat['kuant_arsip_surat']             = $this->input->post('kuant_arsip_surat');
-        $kual_arsip_surat['kual_arsip_surat']               = $this->input->post('kual_arsip_surat');
-        $waktu_arsip_surat['waktu_arsip_surat']             = $this->input->post('waktu_arsip_surat');
-        $biaya_arsip_surat['biaya_arsip_surat']             = $this->input->post('biaya_arsip_surat');
+        $kuant_arsip_surat        = $this->input->post('kuant_arsip_surat');
+        $kual_arsip_surat         = $this->input->post('kual_arsip_surat');
+        $waktu_arsip_surat        = $this->input->post('waktu_arsip_surat');
+        $biaya_arsip_surat        = $this->input->post('biaya_arsip_surat');
 
-        $menerima_surat_masuk = array(
-            $kuant_surat_masuk,
-            $kual_surat_masuk,
-            $waktu_surat_masuk,
-            $biaya_surat_masuk
-        );
+        $menerima_surat_masuk = [
+            'kuant_surat_masuk' => $kuant_surat_masuk,
+            'kual_surat_masuk'  => $kual_surat_masuk,
+            'waktu_surat_masuk' => $waktu_surat_masuk,
+            'biaya_surat_masuk' => $biaya_surat_masuk
+        ];
+
         $distribusi_surat = array(
-            $kuant_distribusi_surat,
-            $kual_distribusi_surat,
-            $waktu_distribusi_surat,
-            $biaya_distribusi_surat
+            'kuant_distribusi_surat' => $kuant_distribusi_surat,
+            'kual_distribusi_surat'  => $kual_distribusi_surat,
+            'waktu_distribusi_surat' => $waktu_distribusi_surat,
+            'biaya_distribusi_surat' => $biaya_distribusi_surat
         );
         $kode_surat = array(
-            $kuant_kode_surat,
-            $kual_kode_surat,
-            $waktu_kode_surat,
-            $biaya_kode_surat
+            'kuant_kode_surat' => $kuant_kode_surat,
+            'kual_kode_surat'  => $kual_kode_surat,
+            'waktu_kode_surat' => $waktu_kode_surat,
+            'biaya_kode_surat' => $biaya_kode_surat
         );
-        $no_anggenda = array(
-            $kuant_no_anggenda,
-            $kual_no_anggenda,
-            $waktu_no_anggenda,
-            $biaya_no_anggenda
+        $no_agenda = array(
+            'kuant_no_agenda' => $kuant_no_agenda,
+            'kual_no_agenda'  => $kual_no_agenda,
+            'waktu_no_agenda' => $waktu_no_agenda,
+            'biaya_no_agenda' => $biaya_no_agenda
         );
         $no_surat = array(
-            $kuant_no_surat,
-            $kual_no_surat,
-            $waktu_no_surat,
-            $biaya_no_surat
+            'kuant_no_surat' => $kuant_no_surat,
+            'kual_no_surat'  => $kual_no_surat,
+            'waktu_no_surat' => $waktu_no_surat,
+            'biaya_no_surat' => $biaya_no_surat
         );
         $arsip_surat = array(
-            $kuant_arsip_surat,
-            $kual_arsip_surat,
-            $waktu_arsip_surat,
-            $biaya_arsip_surat
+            'kuant_arsip_surat' => $kuant_arsip_surat,
+            'kual_arsip_surat'  => $kual_arsip_surat,
+            'waktu_arsip_surat' => $waktu_arsip_surat,
+            'biaya_arsip_surat' => $biaya_arsip_surat
         );
 
-        $json_menerima_surat_masuk = json_encode(array("data" => $menerima_surat_masuk));
-        $json_distribusi_surat = json_encode(array("data" => $distribusi_surat));
-        $json_kode_surat = json_encode(array("data" => $kode_surat));
-        $json_no_anggenda = json_encode(array("data" => $no_anggenda));
-        $json_no_surat = json_encode(array("data" => $no_surat));
-        $json_arsip_surat = json_encode(array("data" => $arsip_surat));
+        $json_menerima_surat_masuk = json_encode($menerima_surat_masuk);
+        $json_distribusi_surat = json_encode($distribusi_surat);
+        $json_kode_surat = json_encode($kode_surat);
+        $json_no_agenda = json_encode($no_agenda);
+        $json_no_surat = json_encode($no_surat);
+        $json_arsip_surat = json_encode($arsip_surat);
 
         if($this->session->userdata('id_formulir')){
             $id = $this->session->userdata('id_formulir');
@@ -346,7 +495,7 @@ class DataSKP extends CI_Controller {
                 'target_menerima_surat_masuk' => $json_menerima_surat_masuk,
                 'target_mendistribusikan_surat' => $json_distribusi_surat,
                 'target_kode_surat' => $json_kode_surat,
-                'target_memberi_no_agenda' => $json_no_anggenda,
+                'target_memberi_no_agenda' => $json_no_agenda,
                 'target_memberi_no_surat' => $json_no_surat,
                 'target_arsipan_surat' => $json_arsip_surat,
             );
@@ -365,7 +514,7 @@ class DataSKP extends CI_Controller {
                 'target_menerima_surat_masuk' => $json_menerima_surat_masuk,
                 'target_mendistribusikan_surat' => $json_distribusi_surat,
                 'target_kode_surat' => $json_kode_surat,
-                'target_memberi_no_agenda' => $json_no_anggenda,
+                'target_memberi_no_agenda' => $json_no_agenda,
                 'target_memberi_no_surat' => $json_no_surat,
                 'target_arsipan_surat' => $json_arsip_surat,
             );
@@ -403,133 +552,134 @@ class DataSKP extends CI_Controller {
 
     public function v_add_pengukuran()
     {
-        $pemeriksaan_regular                                            = $this->input->post('pemeriksaan_regular');
-        $tindak_lanjut                                                  = $this->input->post('tindak_lanjut');
-        $operator_komputer                                              = $this->input->post('operator_komputer');
-        $kreatifitas                                                    = $this->input->post('kreatifitas');
+        $pemeriksaan_regular            = $this->input->post('pemeriksaan_regular');
+        $tindak_lanjut                  = $this->input->post('tindak_lanjut');
+        $operator_komputer              = $this->input->post('operator_komputer');
+        $kreatifitas                    = $this->input->post('kreatifitas');
 
-        $kuant_surat_masuk['kuant_surat_masuk']                         = $this->input->post('kuant_surat_masuk');
-        $kual_surat_masuk['kual_surat_masuk']                           = $this->input->post('kual_surat_masuk');
-        $waktu_surat_masuk['waktu_surat_masuk']                         = $this->input->post('waktu_surat_masuk');
-        $biaya_surat_masuk['biaya_surat_masuk']                         = $this->input->post('biaya_surat_masuk');
-        $kualitas_surat_masuk['kualitas_surat_masuk']                   = $this->input->post('kualitas_surat_masuk');
-        $kuantitas_surat_masuk['kuantitas_surat_masuk']                 = $this->input->post('kuantitas_surat_masuk');
-        $perhitungan_surat_masuk['perhitungan_surat_masuk']             = $this->input->post('perhitungan_surat_masuk');
-        $nilaiskp_surat_masuk['nilaiskp_surat_masuk']                   = $this->input->post('nilaiskp_surat_masuk');
+        $kuant_surat_masuk              = $this->input->post('kuant_surat_masuk');
+        $kual_surat_masuk               = $this->input->post('kual_surat_masuk');
+        $waktu_surat_masuk              = $this->input->post('waktu_surat_masuk');
+        $biaya_surat_masuk              = $this->input->post('biaya_surat_masuk');
+        $kualitas_surat_masuk           = $this->input->post('kualitas_surat_masuk');
+        $kuantitas_surat_masuk          = $this->input->post('kuantitas_surat_masuk');
+        $perhitungan_surat_masuk        = $this->input->post('perhitungan_surat_masuk');
+        $nilaiskp_surat_masuk           = $this->input->post('nilaiskp_surat_masuk');
 
-        $kuant_distribusi_surat['kuant_distribusi_surat']               = $this->input->post('kuant_distribusi_surat');
-        $kual_distribusi_surat['kual_distribusi_surat']                 = $this->input->post('kual_distribusi_surat');
-        $waktu_distribusi_surat['waktu_distribusi_surat']               = $this->input->post('waktu_distribusi_surat');
-        $biaya_distribusi_surat['biaya_distribusi_surat']               = $this->input->post('biaya_distribusi_surat');
-        $kualitas_distribusi_surat['kualitas_distribusi_surat']         = $this->input->post('kualitas_distribusi_surat');
-        $kuantitas_distribusi_surat['kuantitas_distribusi_surat']       = $this->input->post('kuantitas_distribusi_surat');
-        $perhitungan_distribusi_surat['perhitungan_distribusi_surat']   = $this->input->post('perhitungan_distribusi_surat');
-        $nilaiskp_distribusi_surat['nilaiskp_distribusi_surat']         = $this->input->post('nilaiskp_distribusi_surat');
+        $kuant_distribusi_surat         = $this->input->post('kuant_distribusi_surat');
+        $kual_distribusi_surat          = $this->input->post('kual_distribusi_surat');
+        $waktu_distribusi_surat         = $this->input->post('waktu_distribusi_surat');
+        $biaya_distribusi_surat         = $this->input->post('biaya_distribusi_surat');
+        $kualitas_distribusi_surat      = $this->input->post('kualitas_distribusi_surat');
+        $kuantitas_distribusi_surat     = $this->input->post('kuantitas_distribusi_surat');
+        $perhitungan_distribusi_surat   = $this->input->post('perhitungan_distribusi_surat');
+        $nilaiskp_distribusi_surat      = $this->input->post('nilaiskp_distribusi_surat');
 
-        $kuant_kode_surat['kuant_kode_surat']                           = $this->input->post('kuant_kode_surat');
-        $kual_kode_surat['kual_kode_surat']                             = $this->input->post('kual_kode_surat');
-        $waktu_kode_surat['waktu_kode_surat']                           = $this->input->post('waktu_kode_surat');
-        $biaya_kode_surat['biaya_kode_surat']                           = $this->input->post('biaya_kode_surat');
-        $kualitas_kode_surat['kualitas_kode_surat']                     = $this->input->post('kualitas_kode_surat');
-        $kuantitas_kode_surat['kuantitas_kode_surat']                   = $this->input->post('kuantitas_kode_surat');
-        $perhitungan_kode_surat['perhitungan_kode_surat']               = $this->input->post('perhitungan_kode_surat');
-        $nilaiskp_kode_surat['nilaiskp_kode_surat']                     = $this->input->post('nilaiskp_kode_surat');
+        $kuant_kode_surat               = $this->input->post('kuant_kode_surat');
+        $kual_kode_surat                = $this->input->post('kual_kode_surat');
+        $waktu_kode_surat               = $this->input->post('waktu_kode_surat');
+        $biaya_kode_surat               = $this->input->post('biaya_kode_surat');
+        $kualitas_kode_surat            = $this->input->post('kualitas_kode_surat');
+        $kuantitas_kode_surat           = $this->input->post('kuantitas_kode_surat');
+        $perhitungan_kode_surat         = $this->input->post('perhitungan_kode_surat');
+        $nilaiskp_kode_surat            = $this->input->post('nilaiskp_kode_surat');
 
-        $kuant_no_anggenda['kuant_no_anggenda']                         = $this->input->post('kuant_no_anggenda');
-        $kual_no_anggenda['kual_no_anggenda']                           = $this->input->post('kual_no_anggenda');
-        $waktu_no_anggenda['waktu_no_anggenda']                         = $this->input->post('waktu_no_anggenda');
-        $biaya_no_anggenda['biaya_no_anggenda']                         = $this->input->post('biaya_no_anggenda');
-        $kualitas_no_anggenda['kualitas_no_anggenda']                   = $this->input->post('kualitas_no_anggenda');
-        $kuantitas_no_anggenda['kuantitas_no_anggenda']                 = $this->input->post('kuantitas_no_anggenda');
-        $perhitungan_no_anggenda['perhitungan_no_anggenda']             = $this->input->post('perhitungan_no_anggenda');
-        $nilaiskp_no_anggenda['nilaiskp_no_anggenda']                   = $this->input->post('nilaiskp_no_anggenda');
+        $kuant_no_agenda                = $this->input->post('kuant_no_agenda');
+        $kual_no_agenda                 = $this->input->post('kual_no_agenda');
+        $waktu_no_agenda                = $this->input->post('waktu_no_agenda');
+        $biaya_no_agenda                = $this->input->post('biaya_no_agenda');
+        $kualitas_no_agenda             = $this->input->post('kualitas_no_agenda');
+        $kuantitas_no_agenda            = $this->input->post('kuantitas_no_agenda');
+        $perhitungan_no_agenda          = $this->input->post('perhitungan_no_agenda');
+        $nilaiskp_no_agenda             = $this->input->post('nilaiskp_no_agenda');
 
-        $kuant_no_surat['kuant_no_surat']                               = $this->input->post('kuant_no_surat');
-        $kual_no_surat['kual_no_surat']                                 = $this->input->post('kual_no_surat');
-        $waktu_no_surat['waktu_no_surat']                               = $this->input->post('waktu_no_surat');
-        $biaya_no_surat['biaya_no_surat']                               = $this->input->post('biaya_no_surat');
-        $biaya_no_surat['biaya_no_surat']                               = $this->input->post('biaya_no_surat');
-        $kualitas_no_surat['kualitas_no_surat']                         = $this->input->post('kualitas_no_surat');
-        $kuantitas_no_surat['kuantitas_no_surat']                       = $this->input->post('kuantitas_no_surat');
-        $perhitungan_no_surat['perhitungan_no_surat']                   = $this->input->post('perhitungan_no_surat');
-        $nilaiskp_no_surat['nilaiskp_no_surat']                         = $this->input->post('nilaiskp_no_surat');
+        $kuant_no_surat                 = $this->input->post('kuant_no_surat');
+        $kual_no_surat                  = $this->input->post('kual_no_surat');
+        $waktu_no_surat                 = $this->input->post('waktu_no_surat');
+        $biaya_no_surat                 = $this->input->post('biaya_no_surat');
+        $biaya_no_surat                 = $this->input->post('biaya_no_surat');
+        $kualitas_no_surat              = $this->input->post('kualitas_no_surat');
+        $kuantitas_no_surat             = $this->input->post('kuantitas_no_surat');
+        $perhitungan_no_surat           = $this->input->post('perhitungan_no_surat');
+        $nilaiskp_no_surat              = $this->input->post('nilaiskp_no_surat');
 
-        $kuant_arsipan['kuant_arsipan']                                 = $this->input->post('kuant_arsipan');
-        $kual_arsipan['kual_arsipan']                                   = $this->input->post('kual_arsipan');
-        $waktu_arsipan['waktu_arsipan']                                 = $this->input->post('waktu_arsipan');
-        $biaya_arsipan['biaya_arsipan']                                 = $this->input->post('biaya_arsipan');
-        $kualitas_arsipan['kualitas_arsipan']                           = $this->input->post('kualitas_arsipan');
-        $kuantitas_arsipan['kuantitas_arsipan']                         = $this->input->post('kuantitas_arsipan');
-        $perhitungan_arsipan['perhitungan_arsipan']                     = $this->input->post('perhitungan_arsipan');
-        $nilaiskp_arsipan['nilaiskp_arsipan']                           = $this->input->post('nilaiskp_arsipan');
+        $kuant_arsipan                  = $this->input->post('kuant_arsipan');
+        $kual_arsipan                   = $this->input->post('kual_arsipan');
+        $waktu_arsipan                  = $this->input->post('waktu_arsipan');
+        $biaya_arsipan                  = $this->input->post('biaya_arsipan');
+        $kualitas_arsipan               = $this->input->post('kualitas_arsipan');
+        $kuantitas_arsipan              = $this->input->post('kuantitas_arsipan');
+        $perhitungan_arsipan            = $this->input->post('perhitungan_arsipan');
+        $nilaiskp_arsipan               = $this->input->post('nilaiskp_arsipan');
 
         $menerima_surat_masuk = array(
-            $kuant_surat_masuk,
-            $kual_surat_masuk,
-            $waktu_surat_masuk,
-            $biaya_surat_masuk,
-            $kualitas_surat_masuk,
-            $kuantitas_surat_masuk,
-            $perhitungan_surat_masuk,
-            $nilaiskp_surat_masuk
-        );
-        $distribusi_surat = array(
-            $kuant_distribusi_surat,
-            $kual_distribusi_surat,
-            $waktu_distribusi_surat,
-            $biaya_distribusi_surat,
-            $kualitas_distribusi_surat,
-            $kuantitas_distribusi_surat,
-            $perhitungan_distribusi_surat,
-            $nilaiskp_distribusi_surat
-        );
-        $kode_surat = array(
-            $kuant_kode_surat,
-            $kual_kode_surat,
-            $waktu_kode_surat,
-            $biaya_kode_surat,
-            $kualitas_kode_surat,
-            $kuantitas_kode_surat,
-            $perhitungan_kode_surat,
-            $nilaiskp_kode_surat
-        );
-        $no_anggenda = array(
-            $kuant_no_anggenda,
-            $kual_no_anggenda,
-            $waktu_no_anggenda,
-            $biaya_no_anggenda,
-            $kualitas_no_anggenda,
-            $kuantitas_no_anggenda,
-            $perhitungan_no_anggenda,
-            $nilaiskp_no_anggenda
-        );
-        $no_surat = array(
-            $kuant_no_surat,
-            $kual_no_surat,
-            $waktu_no_surat,
-            $biaya_no_surat,
-            $kualitas_no_surat,
-            $kuantitas_no_surat,
-            $perhitungan_no_surat,
-            $nilaiskp_no_surat
-        );
-        $arsipan = array(
-            $kuant_arsipan,
-            $kual_arsipan,
-            $waktu_arsipan,
-            $biaya_arsipan,
-            $kualitas_arsipan,
-            $kuantitas_arsipan,
-            $perhitungan_arsipan,
-            $nilaiskp_arsipan
+            'kuant_surat_masuk'        =>  $kuant_surat_masuk,
+            'kual_surat_masuk'         =>  $kual_surat_masuk,
+            'waktu_surat_masuk'        =>  $waktu_surat_masuk,
+            'biaya_surat_masuk'        =>  $biaya_surat_masuk,
+            'kualitas_surat_masuk'     =>  $kualitas_surat_masuk,
+            'kuantitas_surat_masuk'    =>  $kuantitas_surat_masuk,
+            'perhitungan_surat_masuk'  =>  $perhitungan_surat_masuk,
+            'nilaiskp_surat_masuk'     =>  $nilaiskp_surat_masuk
         );
 
-        $json_menerima_surat_masuk = json_encode(array("data" => $menerima_surat_masuk));
-        $json_distribusi_surat = json_encode(array("data" => $distribusi_surat));
-        $json_kode_surat = json_encode(array("data" => $kode_surat));
-        $json_no_anggenda = json_encode(array("data" => $no_anggenda));
-        $json_no_surat = json_encode(array("data" => $no_surat));
-        $json_arsipan = json_encode(array("data" => $arsipan));
+        $distribusi_surat = array(
+            'kuant_distribusi_surat'        => $kuant_distribusi_surat,
+            'kual_distribusi_surat'         => $kual_distribusi_surat,
+            'waktu_distribusi_surat'        => $waktu_distribusi_surat,
+            'biaya_distribusi_surat'        => $biaya_distribusi_surat,
+            'kualitas_distribusi_surat'     => $kualitas_distribusi_surat,
+            'kuantitas_distribusi_surat'    => $kuantitas_distribusi_surat,
+            'perhitungan_distribusi_surat'  => $perhitungan_distribusi_surat,
+            'nilaiskp_distribusi_surat'      => $nilaiskp_distribusi_surat
+        );
+        $kode_surat = array(
+            'kuant_kode_surat'        => $kuant_kode_surat,
+            'kual_kode_surat'         => $kual_kode_surat,
+            'waktu_kode_surat'        => $waktu_kode_surat,
+            'biaya_kode_surat'        => $biaya_kode_surat,
+            'kualitas_kode_surat'     => $kualitas_kode_surat,
+            'kuantitas_kode_surat'    => $kuantitas_kode_surat,
+            'perhitungan_kode_surat'  => $perhitungan_kode_surat,
+            'nilaiskp_kode_surat'      => $nilaiskp_kode_surat
+        );
+        $no_agenda = array(
+            'kuant_no_agenda'       => $kuant_no_agenda,
+            'kual_no_agenda'        => $kual_no_agenda,
+            'waktu_no_agenda'       => $waktu_no_agenda,
+            'biaya_no_agenda'       => $biaya_no_agenda,
+            'kualitas_no_agenda'    => $kualitas_no_agenda,
+            'kuantitas_no_agenda'   => $kuantitas_no_agenda,
+            'perhitungan_no_agenda' => $perhitungan_no_agenda,
+            'nilaiskp_no_agenda'     => $nilaiskp_no_agenda
+        );
+        $no_surat = array(
+            'kuant_no_surat'        => $kuant_no_surat,
+            'kual_no_surat'         => $kual_no_surat,
+            'waktu_no_surat'        => $waktu_no_surat,
+            'biaya_no_surat'        => $biaya_no_surat,
+            'kualitas_no_surat'     => $kualitas_no_surat,
+            'kuantitas_no_surat'    => $kuantitas_no_surat,
+            'perhitungan_no_surat'  => $perhitungan_no_surat,
+            'nilaiskp_no_surat'      => $nilaiskp_no_surat
+        );
+        $arsipan = array(
+            'kuant_arsipan' => $kuant_arsipan,
+            'kual_arsipan' => $kual_arsipan,
+            'waktu_arsipan' => $waktu_arsipan,
+            'biaya_arsipan' => $biaya_arsipan,
+            'kualitas_arsipan' => $kualitas_arsipan,
+            'kuantitas_arsipan' => $kuantitas_arsipan,
+            'perhitungan_arsipan' => $perhitungan_arsipan,
+            'nilaiskp_arsipan' => $nilaiskp_arsipan
+        );
+
+        $json_menerima_surat_masuk = json_encode($menerima_surat_masuk);
+        $json_distribusi_surat = json_encode($distribusi_surat);
+        $json_kode_surat = json_encode($kode_surat);
+        $json_no_agenda = json_encode($no_agenda);
+        $json_no_surat = json_encode($no_surat);
+        $json_arsipan = json_encode($arsipan);
 
         if($this->session->userdata('id_pengukuran')){
             $id = $this->session->userdata('id_pengukuran');
@@ -541,7 +691,7 @@ class DataSKP extends CI_Controller {
                 'realisasi_surat_masuk' => $json_menerima_surat_masuk,
                 'realisasi_mendistribusi_surat' => $json_distribusi_surat,
                 'realisasi_kode_surat' => $json_kode_surat,
-                'realisasi_no_agenda' => $json_no_anggenda,
+                'realisasi_no_agenda' => $json_no_agenda,
                 'realisasi_no_masuk' => $json_no_surat,
                 'realisasi_arsipan' => $json_arsipan,
             );
@@ -563,7 +713,7 @@ class DataSKP extends CI_Controller {
                 'realisasi_surat_masuk' => $json_menerima_surat_masuk,
                 'realisasi_mendistribusi_surat' => $json_distribusi_surat,
                 'realisasi_kode_surat' => $json_kode_surat,
-                'realisasi_no_agenda' => $json_no_anggenda,
+                'realisasi_no_agenda' => $json_no_agenda,
                 'realisasi_no_masuk' => $json_no_surat,
                 'realisasi_arsipan' => $json_arsipan,
             );

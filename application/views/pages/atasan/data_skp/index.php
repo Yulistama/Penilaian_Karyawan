@@ -17,6 +17,7 @@
                                 <th>Pangkat/Gol</th>
                                 <th>Jabatan</th>
                                 <th>Unit Kerja</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,6 +32,10 @@
                             <td><?php echo $item->pangkat_dinilai ?></td>
                             <td><?php echo $item->jabatan_dinilai ?></td>
                             <td><?php echo $item->unit_kerja_dinilai ?></td>
+                            <td class="text-center">
+                                <a class="badge badge-primary" href="<?php echo base_url(); ?>atasan/dataskp/edit_skp/<?php echo $item->id; ?>" > <i class="fa  fa-edit" > </i> Edit </a><br>
+                                <a class="badge badge-danger" id="btn-hapus" href="<?php echo base_url(); ?>atasan/dataskp/hapus/<?php echo $item->id; ?>"> <i class="fa fa-trash"> </i> Delete </a>
+                            </td>
                             
                         </tr>
                         <?php } ?>
