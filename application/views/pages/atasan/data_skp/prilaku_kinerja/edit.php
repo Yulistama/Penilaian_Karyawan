@@ -158,7 +158,9 @@
                             <div class="row">
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <?php foreach($data_prilakukerja as $item) {?>
-                                    <form method="post" action="<?= base_url('atasan/dataskp/v_add_prilaku_kerja')?>">
+                                    <form method="post" action="<?= base_url('atasan/dataskp/update_prilaku_kerja')?>">
+                                        <input type="hidden" name="id_skp" value="<?php echo $id?>"/>
+                                        <input type="hidden" name="id_prilaku_kerja" value="<?php echo $item->id_prilaku_kerja?>"/>
 
                                     <div class="row">
                                         <div class="col-md-12" style="border: 1px solid black; padding: 20px;">

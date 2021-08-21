@@ -94,8 +94,6 @@
                             </ul>
                         </div>
 
-                        <?php var_dump($data_formulir)?><br>
-
                         <div class="col-md-12" style="margin-top: 50px; padding-left: 50px; padding-right:50px">
                             <div class="row">
                                 <div class="col-12" style="border: solid 1px black; padding:5px 5px 5px 5px">
@@ -130,7 +128,9 @@
                             <div class="row">
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <?php foreach($data_formulir as $item) {?>
-                                    <form method="post" action="<?= base_url('atasan/dataskp/v_add_formulir')?>">
+                                    <form method="post" action="<?= base_url('atasan/dataskp/update_formulir')?>">
+                                        <input type="hidden" name="id_skp" value="<?php echo $id?>"/>
+                                        <input type="hidden" name="id_formulir" value="<?php echo $item->id_formulir?>"/>
 
                                         <div class="row">
                                             <div class="col-md-3">

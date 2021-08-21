@@ -173,7 +173,9 @@
                             <div class="row">
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <?php foreach($data_penilaian as $item) { ?>
-                                    <form method="post" action="<?= base_url('atasan/dataskp/v_add_penilaian_kerja')?>">
+                                    <form method="post" action="<?= base_url('atasan/dataskp/update_penilaian_kerja')?>">
+                                        <input type="hidden" name="id_skp" value="<?php echo $id?>"/>
+                                        <input type="hidden" name="id_penilaian" value="<?php echo $item->id_penilaian?>"/>
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <b>Tanggal Pembuatan</b> 

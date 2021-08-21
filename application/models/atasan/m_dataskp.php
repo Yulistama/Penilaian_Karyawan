@@ -13,6 +13,7 @@ class M_dataskp extends CI_Model {
     function data_skp_by_id($where)
     {
         $this->db->select(' t_skp.id, 
+                            tbl_dataskp.id as id_dataskp, 
                             tbl_dataskp.nama_dinilai, 
                             tbl_dataskp.nip_dinilai, 
                             tbl_dataskp.pangkat_dinilai, 
@@ -38,6 +39,7 @@ class M_dataskp extends CI_Model {
     function data_cover_by_id($where)
     {
         $this->db->select(' t_skp.id, 
+                            tbl_cover.id as id_cover, 
                             tbl_cover.kode_jangka_penilaian, 
                             tbl_cover.jangka_waktu_penilaian, 
                             tbl_cover.tahun, 
@@ -51,6 +53,7 @@ class M_dataskp extends CI_Model {
     function data_formulir_by_id($where)
     {
         $this->db->select(' t_skp.id, 
+                            tbl_formulir.id as id_formulir, 
                             tbl_formulir.kode_formulir, 
                             tbl_formulir.target_menerima_surat_masuk, 
                             tbl_formulir.target_mendistribusikan_surat, 
@@ -68,6 +71,7 @@ class M_dataskp extends CI_Model {
     function data_pengukuran_by_id($where)
     {
         $this->db->select(' t_skp.id, 
+                            tbl_pengukuran.id as id_pengukuran, 
                             tbl_pengukuran.realisasi_surat_masuk, 
                             tbl_pengukuran.realisasi_mendistribusi_surat, 
                             tbl_pengukuran.realisasi_kode_surat, 
@@ -88,6 +92,7 @@ class M_dataskp extends CI_Model {
     function data_prilakukerja_by_id($where)
     {
         $this->db->select(' t_skp.id, 
+                            tbl_prilakukerja.id as id_prilaku_kerja, 
                             tbl_prilakukerja.orientasi_pelayanan, 
                             tbl_prilakukerja.integritas, 
                             tbl_prilakukerja.komitmen, 
@@ -106,6 +111,7 @@ class M_dataskp extends CI_Model {
     function data_penilaian_by_id($where)
     {
         $this->db->select(' t_skp.id, 
+                            tbl_penilaian.id as id_penilaian, 
                             tbl_penilaian.tgl_pembuatan, 
                             tbl_penilaian.tgl_diterima, 
                             tbl_penilaian.tgl_diterimaatasan, 
@@ -119,6 +125,7 @@ class M_dataskp extends CI_Model {
     function data_spt_by_id($where)
     {
         $this->db->select(' t_skp.id, 
+                            tbl_spt.id as id_spt, 
                             tbl_spt.tgl_pembuatan, 
                             tbl_spt.tgl_diterima, 
                             tbl_spt.tgl_diterimaatasan, 
@@ -138,4 +145,9 @@ class M_dataskp extends CI_Model {
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
+
+    function hapus_skp($where,$table){
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }

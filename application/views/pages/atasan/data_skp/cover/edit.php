@@ -110,11 +110,12 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
-                        <?php var_dump($data_cover)?>
                             <div class="row">
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <?php foreach($data_cover as $item) {?>
-                                    <form method="post" action="<?= base_url('atasan/dataskp/v_add_cover')?>">
+                                    <form method="post" action="<?= base_url('atasan/dataskp/update_cover')?>">
+                                    <input type="hidden" name="id_skp" value="<?php echo $id?>"/>
+                                    <input type="hidden" name="id_cover" value="<?php echo $item->id_cover?>"/>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <b>Kode Jangka Waktu Penilaian </b> 
