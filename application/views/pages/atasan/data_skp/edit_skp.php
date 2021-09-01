@@ -71,7 +71,7 @@
                         Edit SKP
                     </h1>
                     <ol class="breadcrumb">
-                      <li><a href="#"><i class=" fa fa-arrow-left"></i> Kembali</a></li>
+                      <li><a href="<?= base_url('atasan/dataskp') ?>"><i class=" fa fa-arrow-left"></i> Kembali</a></li>
                     </ol>
 
                 </div>

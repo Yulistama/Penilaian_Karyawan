@@ -66,7 +66,19 @@
     <div class="header">
         <div class="col-12">
             <div class="row">
-                <div class="col-12" style="margin-top: 50px; padding-top: 50px; background: white; min-height: 1250px">
+                <div class="col-12">
+                    <h1 class="page-header">
+                        Tambah SKP
+                    </h1>
+                    <ol class="breadcrumb">
+                      <li><a href="<?= base_url('atasan/dataskp') ?>"><i class=" fa fa-arrow-left"></i> Kembali</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12" style="margin-top: 0px; padding-top: 50px; background: white; min-height: 1250px">
                     <div class="row">
 
                         <div class="col-md-12">
@@ -142,8 +154,6 @@
                             </div>    
                         </div>
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
-                        <?php var_dump($sessionskp)?>
-                        <?php var_dump($sessionprilaku_kerja)?>
                             <div class="row">
                             <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                 <form method="post" action="<?= base_url('atasan/dataskp/v_add_prilaku_kerja')?>">
@@ -163,19 +173,19 @@
                                     <div class="row" style="margin-top: 20px">
                                         <div class="col-md-3">
                                             <b>Orientasi Pelayanan </b> 
-                                            <input  type="text" name="orientasi" class="form-control" placeholder="Orientasi Pelayanan" =""></input>
+                                            <input  type="text" name="orientasi" class="form-control" placeholder="Orientasi Pelayanan" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Integritas</b> 
-                                            <input  type="text" name="integritas" class="form-control" placeholder="Integritas" ="" ></input>
+                                            <input  type="text" name="integritas" class="form-control" placeholder="Integritas" =""  required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b>Komitmen </b> 
-                                            <input  type="text" name="komitmen" class="form-control" placeholder="Komitmen" =""></input>
+                                            <input  type="text" name="komitmen" class="form-control" placeholder="Komitmen" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Disiplin</b> 
-                                            <input  type="text" name="disiplin" class="form-control" placeholder="Disiplin" =""></input>
+                                            <input  type="text" name="disiplin" class="form-control" placeholder="Disiplin" ="" required/>
                                         </div>
                                         
                                     </div>
@@ -184,19 +194,19 @@
                                     <div class="row">
                                         <div class="col-md-3">
                                             <b>Kerjasama </b> 
-                                            <input  type="text" name="kerjasama" class="form-control" placeholder="Kerjasama" =""></input>
+                                            <input  type="text" name="kerjasama" class="form-control" placeholder="Kerjasama" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Kepemimpinan</b> 
-                                            <input  type="text" name="kepemimpinan" class="form-control" placeholder="Kepemimpinan" =""></input>
+                                            <input  type="text" name="kepemimpinan" class="form-control" placeholder="Kepemimpinan" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b>Jumlah </b> 
-                                            <input  type="text" name="jumlahperilaku" class="form-control" placeholder="Jumlah" =""></input>
+                                            <input  type="text" name="jumlahperilaku" class="form-control" placeholder="Jumlah" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Nilai Rata-rata</b> 
-                                            <input  type="text" name="nilairataperilaku" class="form-control" placeholder="Nilai Rata-rata" =""></input>
+                                            <input  type="text" name="nilairataperilaku" class="form-control" placeholder="Nilai Rata-rata" ="" required/>
                                         </div>
                                     </div>
                                     <br>

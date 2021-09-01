@@ -119,15 +119,16 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <b>Kode Jangka Waktu Penilaian </b> 
-                                            <input  type="text" value="<?php echo $item->kode_jangka_penilaian?>" name="kode_jangka_penilaian" class="form-control" placeholder="Masukan Kode Jangka Waktu Penilaian" ></input>
+                                            <input  type="text" value="<?php echo $item->kode_jangka_penilaian?>" name="kode_jangka_penilaian" class="form-control" placeholder="Masukan Kode Jangka Waktu Penilaian" required/>
                                         </div>
                                         <div class="col-md-4">
                                             <b>Jangka Waktu Penilaian </b> 
-                                            <input  type="text" value="<?php echo $item->jangka_waktu_penilaian?>" name="jangka_waktu" class="form-control" placeholder="Masukan Jangka Waktu Penilaian" ></input>
+                                            <input  type="text" value="<?php echo $item->jangka_waktu_penilaian?>" name="jangka_waktu" class="form-control" placeholder="Masukan Jangka Waktu Penilaian" required/>
                                         </div>
                                         <div class="col-md-4">
                                             <b>Tahun </b>
-                                            <select class="form-control" id="tahun" name="tahun">
+                                            <select class="form-control" id="tahun" name="tahun" required>
+                                                <option value="">--Pilih--</option>
                                                 <?php for($i=date('Y'); $i>=date('Y')-32; $i-=1) { ?>
                                                     <option value="<?php echo $i ?>" <?php if($item->tahun == $i){?> selected<?php }?>><?php echo $i ?></option>
                                                 <?php } ?>

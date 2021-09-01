@@ -177,19 +177,19 @@
                                     <div class="row" style="margin-top: 20px">
                                         <div class="col-md-3">
                                             <b>Orientasi Pelayanan </b> 
-                                            <input  type="text" value="<?php echo $item->orientasi_pelayanan?>" name="orientasi" class="form-control" placeholder="Orientasi Pelayanan" =""></input>
+                                            <input  type="text" value="<?php echo $item->orientasi_pelayanan?>" name="orientasi" class="form-control" placeholder="Orientasi Pelayanan" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Integritas</b> 
-                                            <input  type="text" value="<?php echo $item->integritas?>" name="integritas" class="form-control" placeholder="Integritas" ="" ></input>
+                                            <input  type="text" value="<?php echo $item->integritas?>" name="integritas" class="form-control" placeholder="Integritas" =""  required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b>Komitmen </b> 
-                                            <input  type="text" value="<?php echo $item->komitmen?>" name="komitmen" class="form-control" placeholder="Komitmen" =""></input>
+                                            <input  type="text" value="<?php echo $item->komitmen?>" name="komitmen" class="form-control" placeholder="Komitmen" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Disiplin</b> 
-                                            <input  type="text" value="<?php echo $item->disiplin?>" name="disiplin" class="form-control" placeholder="Disiplin" =""></input>
+                                            <input  type="text" value="<?php echo $item->disiplin?>" name="disiplin" class="form-control" placeholder="Disiplin" ="" required/>
                                         </div>
                                         
                                     </div>
@@ -198,19 +198,19 @@
                                     <div class="row">
                                         <div class="col-md-3">
                                             <b>Kerjasama </b> 
-                                            <input  type="text" value="<?php echo $item->kerjasama?>" name="kerjasama" class="form-control" placeholder="Kerjasama" =""></input>
+                                            <input  type="text" value="<?php echo $item->kerjasama?>" name="kerjasama" class="form-control" placeholder="Kerjasama" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Kepemimpinan</b> 
-                                            <input  type="text" value="<?php echo $item->kepemimpinan?>" name="kepemimpinan" class="form-control" placeholder="Kepemimpinan" =""></input>
+                                            <input  type="text" value="<?php echo $item->kepemimpinan?>" name="kepemimpinan" class="form-control" placeholder="Kepemimpinan" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b>Jumlah </b> 
-                                            <input  type="text" value="<?php echo $item->jumlah_perilaku?>" name="jumlahperilaku" class="form-control" placeholder="Jumlah" =""></input>
+                                            <input  type="text" value="<?php echo $item->jumlah_perilaku?>" name="jumlahperilaku" class="form-control" placeholder="Jumlah" ="" required/>
                                         </div>
                                         <div class="col-md-3">
                                             <b> Nilai Rata-rata</b> 
-                                            <input  type="text" value="<?php echo $item->nilai_rata_perilaku?>" name="nilairataperilaku" class="form-control" placeholder="Nilai Rata-rata" =""></input>
+                                            <input  type="text" value="<?php echo $item->nilai_rata_perilaku?>" name="nilairataperilaku" class="form-control" placeholder="Nilai Rata-rata" ="" required/>
                                         </div>
                                     </div>
                                     <br>

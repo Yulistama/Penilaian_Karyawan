@@ -27,8 +27,9 @@ class DataSKP extends CI_Controller {
     // s.tampil form
     public function add_data_skp()
     {
-        $data['sessionskp'] = $this->session->userdata('id_skp');
-        $data['session_dataskp'] = $this->session->userdata('id_dataskp');
+        $data['karyawan'] = $this->m_dataskp->karyawan()->result();
+        $data['penilai'] = $this->m_dataskp->penilai()->result();
+        $data['atasan'] = $this->m_dataskp->atasan()->result();
 
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
@@ -38,70 +39,55 @@ class DataSKP extends CI_Controller {
     }
     public function add_cover()
     {
-        $data['sessionskp'] = $this->session->userdata('id_skp');
-        $data['session_cover'] = $this->session->userdata('id_cover');
-
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
         $this->load->view('template/v_sidebar');
-        $this->load->view('pages/atasan/data_skp/cover/index', $data);
+        $this->load->view('pages/atasan/data_skp/cover/index');
         $this->load->view('template/v_footer');
     }
     
     public function add_formulir()
     {
-        $data['sessionskp'] = $this->session->userdata('id_skp');
-        $data['sessionformulir'] = $this->session->userdata('id_formulir');
-        
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
         $this->load->view('template/v_sidebar');
-        $this->load->view('pages/atasan/data_skp/formulir_skp/index',$data);
+        $this->load->view('pages/atasan/data_skp/formulir_skp/index');
         $this->load->view('template/v_footer');
     }
     
     public function add_pengukuran_capa()
     {
-        $data['sessionskp'] = $this->session->userdata('id_skp');
-        $data['sessionpengukuran'] = $this->session->userdata('id_pengukuran');
-
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
         $this->load->view('template/v_sidebar');
-        $this->load->view('pages/atasan/data_skp/pengukuran_skp/index',$data);
+        $this->load->view('pages/atasan/data_skp/pengukuran_skp/index');
         $this->load->view('template/v_footer');
     }
     
     public function add_prilaku_kerja()
     {
-        $data['sessionskp'] = $this->session->userdata('id_skp');
-        $data['sessionprilaku_kerja'] = $this->session->userdata('id_prilaku_kerja');
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
         $this->load->view('template/v_sidebar');
-        $this->load->view('pages/atasan/data_skp/prilaku_kinerja/index', $data);
+        $this->load->view('pages/atasan/data_skp/prilaku_kinerja/index');
         $this->load->view('template/v_footer');
     }
     
     public function add_penilaian_kerja()
     {
-        $data['sessionskp'] = $this->session->userdata('id_skp');
-        $data['sessionpenilaian_kerja'] = $this->session->userdata('id_penilaian_kerja');
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
         $this->load->view('template/v_sidebar');
-        $this->load->view('pages/atasan/data_skp/penilaian_kerja/index', $data);
+        $this->load->view('pages/atasan/data_skp/penilaian_kerja/index');
         $this->load->view('template/v_footer');
     }
     
     public function add_spt()
     {
-        $data['sessionskp'] = $this->session->userdata('id_skp');
-        $data['sessionspt'] = $this->session->userdata('id_spt');
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
         $this->load->view('template/v_sidebar');
-        $this->load->view('pages/atasan/data_skp/spt_dp3/index', $data);
+        $this->load->view('pages/atasan/data_skp/spt_dp3/index');
         $this->load->view('template/v_footer');
     }
     // e.tampil form
@@ -119,6 +105,9 @@ class DataSKP extends CI_Controller {
 
     public function edit_data_skp($id)
     {
+        $data['karyawan'] = $this->m_dataskp->karyawan()->result();
+        $data['penilai'] = $this->m_dataskp->penilai()->result();
+        $data['atasan'] = $this->m_dataskp->atasan()->result();
         $where = $id;
 		$data['data_skp'] = $this->m_dataskp->data_skp_by_id($where);
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
@@ -257,6 +246,8 @@ class DataSKP extends CI_Controller {
     // s.submit form
     public function v_add_dataskp()
     {
+        $id_user = $this->input->post('id_user');
+        $id_karyawan = $this->input->post('id_karyawan');
         $nama = $this->input->post('nama');
         $nip = $this->input->post('nip');
         $golongan = $this->input->post('golongan');
@@ -325,6 +316,8 @@ class DataSKP extends CI_Controller {
         if($this->session->userdata('id_skp')){
             $id = $this->session->userdata('id_skp');
             $data = array(
+                'id_user' => $id_user,
+                'id_karyawan' => $id_karyawan,
                 'id_tbl_dataskp' => $id_dataskp,
                 'status_skp' => '1',
             );
@@ -338,6 +331,8 @@ class DataSKP extends CI_Controller {
 
         }else{
             $data = array(
+                'id_user' => $id_user,
+                'id_karyawan' => $id_karyawan,
                 'id_tbl_dataskp' => $id_dataskp,
                 'status_skp' => '1',
             );
@@ -1356,4 +1351,61 @@ class DataSKP extends CI_Controller {
         redirect('atasan/dataskp');
     }
     // e.hapus skp
+
+    // data karyawan
+    function get_detail_karyawan()
+    {
+        $where = $this->input->post('id');
+		$data['karyawan'] = $this->m_dataskp->karyawan_by_id($where,'id')->result();
+
+        $id_jabatan = $data['karyawan'][0]->id_jabatan;
+        $where = array('id' => $id_jabatan);
+        $data['jabatan'] = $this->m_dataskp->jabatan_by_id($where,'id')->result();
+
+        $id_golongan = $data['karyawan'][0]->id_golongan;
+        $where = array('id' => $id_golongan);
+        $data['golongan'] = $this->m_dataskp->golongan_by_id($where,'id')->result();
+        echo json_encode($data);
+    }
+    
+    // data penilai
+    function get_detail_penilai()
+    {
+        $where = $this->input->post('id');
+		$data['karyawan'] = $this->m_dataskp->karyawan_by_id($where,'id')->result();
+
+        $id_jabatan = $data['karyawan'][0]->id_jabatan;
+        $where = array('id' => $id_jabatan);
+        $data['jabatan'] = $this->m_dataskp->jabatan_by_id($where,'id')->result();
+
+        $id_golongan = $data['karyawan'][0]->id_golongan;
+        $where = array('id' => $id_golongan);
+        $data['golongan'] = $this->m_dataskp->golongan_by_id($where,'id')->result();
+        echo json_encode($data);
+    }
+    
+    // data atasan
+    function get_detail_atasan()
+    {
+        $where = $this->input->post('id');
+		$data['karyawan'] = $this->m_dataskp->karyawan_by_id($where,'id')->result();
+
+        $id_jabatan = $data['karyawan'][0]->id_jabatan;
+        $where = array('id' => $id_jabatan);
+        $data['jabatan'] = $this->m_dataskp->jabatan_by_id($where,'id')->result();
+
+        $id_golongan = $data['karyawan'][0]->id_golongan;
+        $where = array('id' => $id_golongan);
+        $data['golongan'] = $this->m_dataskp->golongan_by_id($where,'id')->result();
+        echo json_encode($data);
+    }
+
+    // data last skp
+    function get_last_skp()
+    {
+        $last_id = $this->m_dataskp->last_id_skp()->result();
+        $where = array('id' => $last_id[0]->id_tbl_formulir);
+        $data['tblformulir'] = $this->m_dataskp->tbl_formulir_by_id($where,'id')->result();
+        echo json_encode($data);
+    }
 }

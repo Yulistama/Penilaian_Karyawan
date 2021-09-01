@@ -23,7 +23,7 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <?php if($this->session->userdata('role') == 'atasan'){ ?>
-                        <!-- <?php var_dump($id); ?> -->
+                        <!-- <?php var_dump($this->session->userdata()); ?> -->
                         <li>
                             <a class="<?= current_url() == base_url('atasan/dashboard') ? 'active-menu' : ''?>" href="<?= base_url('atasan/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                         </li>

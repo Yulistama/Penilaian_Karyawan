@@ -179,15 +179,15 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <b>Tanggal Pembuatan</b> 
-                                                <input  value="<?php echo $item->tgl_pembuatan?>" type="date" name="tgl_pembuatan" class="form-control" placeholder="Kode" ></input>
+                                                <input  value="<?php echo $item->tgl_pembuatan?>" type="date" name="tgl_pembuatan" class="form-control" placeholder="Kode" required/>
                                             </div>
                                             <div class="col-md-4">
                                                 <b>Tanggal Diterima pegawai</b> 
-                                                <input  value="<?php echo $item->tgl_diterima?>" type="date" name="tgl_diterima" class="form-control" placeholder="Kode" ></input>
+                                                <input  value="<?php echo $item->tgl_diterima?>" type="date" name="tgl_diterima" class="form-control" placeholder="Kode" required/>
                                             </div>
                                             <div class="col-md-4">
                                                 <b>Tanggal Diterima Atasan Pejabat</b> 
-                                                <input  value="<?php echo $item->tgl_diterimaatasan?>" type="date" name="tgl_diterima_atasan" class="form-control" placeholder="Kode" ></input>
+                                                <input  value="<?php echo $item->tgl_diterimaatasan?>" type="date" name="tgl_diterima_atasan" class="form-control" placeholder="Kode" required/>
                                             </div>
                                         </div>
                                         <br>

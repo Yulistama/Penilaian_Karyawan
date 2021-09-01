@@ -105,78 +105,96 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <b>Nama yang dinilai </b>
-                                                    <input type="text" name="nama" value="<?php echo $item->nama_dinilai?>" class="form-control" placeholder="Masukan Nama"></input>
+                                                    <select class="form-control" id="nama" name="nama" required>
+                                                        <option value="" >--Pilih--</option>
+                                                        <?php foreach($karyawan as $kar) { ?>
+                                                            <option data-valuea="<?php echo $kar->id ?>" value="<?php echo $kar->name ?>" <?php if($kar->name === $item->nama_dinilai){?> selected<?php }?>><?php echo $kar->name ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                    <!-- <input type="text" name="nama" value="<?php echo $item->nama_dinilai?>" class="form-control" placeholder="Masukan Nama"></input> -->
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Nip </b>
-                                                    <input type="text" name="nip" value="<?php echo $item->nip_dinilai?>" class="form-control" placeholder="Masukan Nip"></input>
+                                                    <input type="text" id="nip" name="nip" value="<?php echo $item->nip_dinilai?>" class="form-control" placeholder="Masukan Nip" readonly></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Pangkat / Golongan Ruang </b>
-                                                    <input type="text" name="golongan" value="<?php echo $item->pangkat_dinilai?>" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang"></input>
+                                                    <input type="text" id="golongan" name="golongan" value="<?php echo $item->pangkat_dinilai?>" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang" readonly></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <b>Jabatan </b>
-                                                    <input type="text" name="jabatan" value="<?php echo $item->jabatan_dinilai?>" class="form-control" placeholder="Masukan Jabatan"></input>
+                                                    <input type="text" id="jabatan" name="jabatan" value="<?php echo $item->jabatan_dinilai?>" class="form-control" placeholder="Masukan Jabatan" readonly></input>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <b>Unit Kerja </b>
-                                                    <input type="text" name="unitkerja" value="<?php echo $item->unit_kerja_dinilai?>" class="form-control" placeholder="Masukan Unit Kerja"></input>
+                                                    <input type="text" id="unitkerja" name="unitkerja" value="<?php echo $item->unit_kerja_dinilai?>" class="form-control" placeholder="Masukan Unit Kerja" readonly></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <b>Nama Pejabat Penilai </b>
-                                                    <input type="text" name="nama_pp" value="<?php echo $item->nama_penilai?>" class="form-control" placeholder="Masukan Nama"></input>
+                                                    <select class="form-control" id="nama_pp" name="nama_pp" required>
+                                                        <option value="" >--Pilih--</option>
+                                                        <?php foreach($penilai as $pen) { ?>
+                                                            <option data-valuea="<?php echo $pen->id ?>" value="<?php echo $pen->name ?>" <?php if($pen->name === $item->nama_penilai){?> selected<?php }?>><?php echo $pen->name ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                    <!-- <input type="text" id="nama_pp" name="nama_pp" value="<?php echo $item->nama_penilai?>" class="form-control" placeholder="Masukan Nama" readonly></input> -->
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Nip </b>
-                                                    <input type="text" name="nip_pp" value="<?php echo $item->nip_penilai?>" class="form-control" placeholder="Masukan Nip"></input>
+                                                    <input type="text" id="nip_pp" name="nip_pp" value="<?php echo $item->nip_penilai?>" class="form-control" placeholder="Masukan Nip" readonly></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Pangkat / Golongan Ruang </b>
-                                                    <input type="text" name="pangkat_pp" value="<?php echo $item->pangkat_penilai?>" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang"></input>
+                                                    <input type="text" id="pangkat_pp" name="pangkat_pp" value="<?php echo $item->pangkat_penilai?>" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang" readonly></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <b>Jabatan </b>
-                                                    <input type="text" name="jabatan_pp" value="<?php echo $item->jabatan_penilai?>" class="form-control" placeholder="Masukan Jabatan"></input>
+                                                    <input type="text" id="jabatan_pp" name="jabatan_pp" value="<?php echo $item->jabatan_penilai?>" class="form-control" placeholder="Masukan Jabatan" readonly></input>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <b>Unit Kerja </b>
-                                                    <input type="text" name="unitkerja_pp" value="<?php echo $item->unit_kerja_penilai?>" class="form-control" placeholder="Masukan Unit Kerja"></input>
+                                                    <input type="text" id="unitkerja_pp" name="unitkerja_pp" value="<?php echo $item->unit_kerja_penilai?>" class="form-control" placeholder="Masukan Unit Kerja" readonly></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <b>Nama Atasan Pejabat Penilai </b>
-                                                    <input type="text" name="nama_app" value="<?php echo $item->nama_atasan?>" class="form-control" placeholder="Masukan Nama"></input>
+                                                    <select class="form-control" id="nama_app" name="nama_app" required>
+                                                        <option value="" >--Pilih--</option>
+                                                        <?php foreach($atasan as $atas) { ?>
+                                                            <option data-valuea="<?php echo $atas->id ?>" value="<?php echo $atas->name ?>" <?php if($atas->name === $item->nama_atasan){?> selected<?php }?>><?php echo $atas->name ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                    <!-- <input type="text" name="nama_app" value="<?php echo $item->nama_atasan?>" class="form-control" placeholder="Masukan Nama"></input> -->
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Nip </b>
-                                                    <input type="text" name="nip_app" value="<?php echo $item->nip_atasan?>" class="form-control" placeholder="Masukan Nip"></input>
+                                                    <input type="text" id="nip_app" name="nip_app" value="<?php echo $item->nip_atasan?>" class="form-control" placeholder="Masukan Nip" readonly></input>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <b>Pangkat / Golongan Ruang </b>
-                                                    <input type="text" name="pangkat_app" value="<?php echo $item->pangkat_atasan?>" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang"></input>
+                                                    <input type="text" id="pangkat_app" name="pangkat_app" value="<?php echo $item->pangkat_atasan?>" class="form-control" placeholder="Masukan Pangkat / Golongan Ruang" readonly></input>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <b>Jabatan </b>
-                                                    <input type="text" name="jabatan_app" value="<?php echo $item->jabatan_atasan?>" class="form-control" placeholder="Masukan Jabatan"></input>
+                                                    <input type="text" id="jabatan_app" name="jabatan_app" value="<?php echo $item->jabatan_atasan?>" class="form-control" placeholder="Masukan Jabatan" readonly></input>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <b>Unit Kerja </b>
-                                                    <input type="text" name="unitkerja_app" value="<?php echo $item->unit_kerja_atasan?>" class="form-control" placeholder="Masukan Unit Kerja"></input>
+                                                    <input type="text" id="unitkerja_app" name="unitkerja_app" value="<?php echo $item->unit_kerja_atasan?>" class="form-control" placeholder="Masukan Unit Kerja" readonly></input>
                                                 </div>
                                             </div>
                                             <br>
@@ -293,3 +311,65 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#nama').change(function(){ 
+            var id = $('#nama option:selected').data('valuea');
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_detail_karyawan/",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                    $('#nip').val(data.karyawan[0].nip);
+                    $('#unitkerja').val(data.karyawan[0].unit_kerja);
+                    $('#golongan').val(data.golongan[0].name);
+                    $('#jabatan').val(data.jabatan[0].name);
+                    $('#jabatan').val(data.jabatan[0].name);
+                    $('#id_karyawan').val(id);
+                }
+            });
+            return false;
+        }); 
+        
+        $('#nama_pp').change(function(){ 
+            var id = $('#nama_pp option:selected').data('valuea');
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_detail_penilai/",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                     $('#nip_pp').val(data.karyawan[0].nip);
+                     $('#unitkerja_pp').val(data.karyawan[0].unit_kerja);
+                     $('#pangkat_pp').val(data.golongan[0].name);
+                     $('#jabatan_pp').val(data.jabatan[0].name);
+                }
+            });
+            return false;
+        }); 
+        
+        $('#nama_app').change(function(){ 
+            var id = $('#nama_app option:selected').data('valuea');
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_detail_atasan/",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                     $('#nip_app').val(data.karyawan[0].nip);
+                     $('#unitkerja_app').val(data.karyawan[0].unit_kerja);
+                     $('#pangkat_app').val(data.golongan[0].name);
+                     $('#jabatan_app').val(data.jabatan[0].name);
+                }
+            });
+            return false;
+        }); 
+         
+    });
+</script>

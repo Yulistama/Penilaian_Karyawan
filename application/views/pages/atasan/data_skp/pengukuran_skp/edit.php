@@ -151,19 +151,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Surat Masuk </b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuant_surat_masuk ?>" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuant_surat_masuk ?>" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kual_surat_masuk ?>" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kual_surat_masuk ?>" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->waktu_surat_masuk ?>" name="waktu_surat_masuk" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->waktu_surat_masuk ?>" name="waktu_surat_masuk" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->biaya_surat_masuk ?>" name="biaya_surat_masuk" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->biaya_surat_masuk ?>" name="biaya_surat_masuk" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -171,19 +171,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kualitas_surat_masuk ?>" name="kualitas_surat_masuk" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kualitas_surat_masuk ?>" name="kualitas_surat_masuk" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuantitas_surat_masuk ?>" name="kuantitas_surat_masuk" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuantitas_surat_masuk ?>" name="kuantitas_surat_masuk" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->perhitungan_surat_masuk ?>" name="perhitungan_surat_masuk" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->perhitungan_surat_masuk ?>" name="perhitungan_surat_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->nilaiskp_surat_masuk ?>" name="nilaiskp_surat_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->nilaiskp_surat_masuk ?>" name="nilaiskp_surat_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -191,19 +191,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Kode Surat</b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kuant_kode_surat ?>" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kuant_kode_surat ?>" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kual_kode_surat ?>" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kual_kode_surat ?>" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->waktu_kode_surat ?>" name="waktu_kode_surat" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->waktu_kode_surat ?>" name="waktu_kode_surat" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->biaya_kode_surat ?>" name="biaya_kode_surat" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->biaya_kode_surat ?>" name="biaya_kode_surat" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -211,19 +211,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kualitas_kode_surat ?>" name="kualitas_kode_surat" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kualitas_kode_surat ?>" name="kualitas_kode_surat" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kuantitas_kode_surat ?>" name="kuantitas_kode_surat" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->kuantitas_kode_surat ?>" name="kuantitas_kode_surat" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->perhitungan_kode_surat ?>" name="perhitungan_kode_surat" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->perhitungan_kode_surat ?>" name="perhitungan_kode_surat" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_kode_surat->nilaiskp_kode_surat ?>" name="nilaiskp_kode_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_kode_surat->nilaiskp_kode_surat ?>" name="nilaiskp_kode_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -231,19 +231,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi No Agenda </b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kuant_no_agenda ?>" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kuant_no_agenda ?>" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kual_no_agenda ?>" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kual_no_agenda ?>" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->waktu_no_agenda ?>" name="waktu_no_agenda" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->waktu_no_agenda ?>" name="waktu_no_agenda" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->biaya_no_agenda ?>" name="biaya_no_agenda" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->biaya_no_agenda ?>" name="biaya_no_agenda" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -251,19 +251,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kualitas_no_agenda ?>" name="kualitas_no_agenda" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kualitas_no_agenda ?>" name="kualitas_no_agenda" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kuantitas_no_agenda ?>" name="kuantitas_no_agenda" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->kuantitas_no_agenda ?>" name="kuantitas_no_agenda" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->perhitungan_no_agenda ?>" name="perhitungan_no_agenda" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->perhitungan_no_agenda ?>" name="perhitungan_no_agenda" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_agenda->nilaiskp_no_agend ?>" name="nilaiskp_no_agenda" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_agenda->nilaiskp_no_agenda ?>" name="nilaiskp_no_agenda" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -271,19 +271,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi No Masuk </b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuant_no_surat ?>" name="kuant_no_masuk" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuant_no_surat ?>" name="kuant_no_masuk" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kual_no_surat ?>" name="kual_no_masuk" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kual_no_surat ?>" name="kual_no_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->waktu_no_surat ?>" name="waktu_no_masuk" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->waktu_no_surat ?>" name="waktu_no_masuk" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->biaya_no_surat ?>" name="biaya_no_masuk" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->biaya_no_surat ?>" name="biaya_no_masuk" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -291,19 +291,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kualitas_no_surat ?>" name="kualitas_no_masuk" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kualitas_no_surat ?>" name="kualitas_no_masuk" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuantitas_no_surat ?>" name="kuantitas_no_masuk" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuantitas_no_surat ?>" name="kuantitas_no_masuk" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->perhitungan_no_surat ?>" name="perhitungan_no_masuk" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->perhitungan_no_surat ?>" name="perhitungan_no_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->nilaiskp_no_surat ?>" name="nilaiskp_no_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->nilaiskp_no_surat ?>" name="nilaiskp_no_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -311,19 +311,19 @@
                                     <div class="row">
                                     <div class="col-md-3" style="font-size: small;">
                                         <b> Realisasi Mendistribusi Surat</b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuant_distribusi_surat ?>" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuant_distribusi_surat ?>" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kual_distribusi_surat ?>" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kual_distribusi_surat ?>" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->waktu_distribusi_surat ?>" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->waktu_distribusi_surat ?>" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->biaya_distribusi_surat ?>" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->biaya_distribusi_surat ?>" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -331,19 +331,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kualitas_distribusi_surat ?>" name="kualitas_distribusi_surat" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kualitas_distribusi_surat ?>" name="kualitas_distribusi_surat" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuantitas_distribusi_surat ?>" name="kuantitas_distribusi_surat" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuantitas_distribusi_surat ?>" name="kuantitas_distribusi_surat" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->perhitungan_distribusi_surat ?>" name="perhitungan_distribusi_surat" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->perhitungan_distribusi_surat ?>" name="perhitungan_distribusi_surat" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->nilaiskp_distribusi_surat ?>" name="nilaiskp_distribusi_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->nilaiskp_distribusi_surat ?>" name="nilaiskp_distribusi_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -351,19 +351,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Arsipan </b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuant_arsipan ?>" name="kuant_arsipan" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuant_arsipan ?>" name="kuant_arsipan" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kual_arsipan ?>" name="kual_arsipan" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kual_arsipan ?>" name="kual_arsipan" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->waktu_arsipan ?>" name="waktu_arsipan" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->waktu_arsipan ?>" name="waktu_arsipan" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->biaya_arsipan ?>" name="biaya_arsipan" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->biaya_arsipan ?>" name="biaya_arsipan" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -371,19 +371,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kualitas_arsipan ?>" name="kualitas_arsipan" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kualitas_arsipan ?>" name="kualitas_arsipan" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuantitas_arsipan ?>" name="kuantitas_arsipan" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuantitas_arsipan ?>" name="kuantitas_arsipan" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->perhitungan_arsipan ?>" name="perhitungan_arsipan" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->perhitungan_arsipan ?>" name="perhitungan_arsipan" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->nilaiskp_arsipan ?>" name="nilaiskp_arsipan" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->nilaiskp_arsipan ?>" name="nilaiskp_arsipan" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -391,34 +391,34 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Pemeriksaan Reguler </b> 
-                                        <input  type="text" value="<?php echo $item->pemeriksaan_reguler?>" name="pemeriksaan_regular" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" value="<?php echo $item->pemeriksaan_reguler?>" name="pemeriksaan_regular" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-3">
                                         <b> Tindak Lanjut </b> 
-                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" name="tindak_lanjut" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" name="tindak_lanjut" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" name="total1" class="form-control" placeholder="" readonly></input>
+                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" name="total1" class="form-control" placeholder="" readonly required/>
                                     </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Operator Komputer </b> 
-                                        <input  type="text" value="<?php echo $item->operator_komputer?>" name="operator_komputer" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" value="<?php echo $item->operator_komputer?>" name="operator_komputer" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-3">
                                         <b> Kreatifitas </b> 
-                                        <input  type="text" value="<?php echo $item->kreatifitas?>" name="kreatifitas" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" value="<?php echo $item->kreatifitas?>" name="kreatifitas" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" name="total2" class="form-control" placeholder="" readonly></input>
+                                        <input  type="text" name="total2" class="form-control" placeholder="" readonly required/>
                                     </div>
                                     </div>
                                     <br>

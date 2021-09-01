@@ -135,7 +135,7 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Kode Formulir </b> 
-                                                <input  type="text" name="kode_formulir" value="<?php echo $item->kode_formulir?>" class="form-control" placeholder="Kode"></input>
+                                                <input  type="text" name="kode_formulir" value="<?php echo $item->kode_formulir?>" class="form-control" placeholder="Kode" required/>
                                             </div>
                                         </div>
                                         
@@ -143,19 +143,19 @@
                                         <div class="row">
                                             <div class="col-md-3" style="font-size: small;">
                                                 <b> Target Menerima Surat Masuk </b> 
-                                                <input  type="text" value="<?php echo $surat_masuk->kuant_surat_masuk?>" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" value="<?php echo $surat_masuk->kuant_surat_masuk?>" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $surat_masuk->kual_surat_masuk?>" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" value="<?php echo $surat_masuk->kual_surat_masuk?>" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $surat_masuk->waktu_surat_masuk?>" name="waktu_surat_masuk" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" value="<?php echo $surat_masuk->waktu_surat_masuk?>" name="waktu_surat_masuk" class="form-control" placeholder="Waktu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $surat_masuk->biaya_surat_masuk?>" name="biaya_surat_masuk" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" value="<?php echo $surat_masuk->biaya_surat_masuk?>" name="biaya_surat_masuk" class="form-control" placeholder="Biaya"  required/>
                                             </div>
                                         </div>
                                         <br>
@@ -163,19 +163,19 @@
                                         <div class="row">
                                             <div class="col-md-3" style="font-size: small;">
                                                 <b>Target Mendistribusikan Surat </b> 
-                                                <input  type="text" value="<?php echo $distribusi_surat->kuant_distribusi_surat?>" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" value="<?php echo $distribusi_surat->kuant_distribusi_surat?>" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $distribusi_surat->kual_distribusi_surat?>" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" value="<?php echo $distribusi_surat->kual_distribusi_surat?>" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $distribusi_surat->waktu_distribusi_surat?>" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" value="<?php echo $distribusi_surat->waktu_distribusi_surat?>" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $distribusi_surat->biaya_distribusi_surat?>" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" value="<?php echo $distribusi_surat->biaya_distribusi_surat?>" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya"  required/>
                                             </div>
                                         </div>
                                         <br>
@@ -184,19 +184,19 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Kode Surat </b> 
-                                                <input  type="text" value="<?php echo $kode_surat->kuant_kode_surat?>" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" value="<?php echo $kode_surat->kuant_kode_surat?>" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $kode_surat->kual_kode_surat?>" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" value="<?php echo $kode_surat->kual_kode_surat?>" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $kode_surat->waktu_kode_surat?>" name="waktu_kode_surat" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" value="<?php echo $kode_surat->waktu_kode_surat?>" name="waktu_kode_surat" class="form-control" placeholder="Waktu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $kode_surat->biaya_kode_surat?>" name="biaya_kode_surat" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" value="<?php echo $kode_surat->biaya_kode_surat?>" name="biaya_kode_surat" class="form-control" placeholder="Biaya"  required/>
                                             </div>
                                         </div>
 
@@ -204,38 +204,38 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Memberi No Agenda </b> 
-                                                <input  type="text" value="<?php echo $no_agenda->kuant_no_agenda?>" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" value="<?php echo $no_agenda->kuant_no_agenda?>" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $no_agenda->kual_no_agenda?>" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" value="<?php echo $no_agenda->kual_no_agenda?>" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $no_agenda->waktu_no_agenda?>" name="waktu_no_agenda" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" value="<?php echo $no_agenda->waktu_no_agenda?>" name="waktu_no_agenda" class="form-control" placeholder="Waktu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $no_agenda->biaya_no_agenda?>" name="biaya_no_agenda" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" value="<?php echo $no_agenda->biaya_no_agenda?>" name="biaya_no_agenda" class="form-control" placeholder="Biaya"  required/>
                                             </div>
                                         </div>
                                         <br>
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Memberi No Surat </b> 
-                                                <input  type="text" value="<?php echo $no_surat->kuant_no_surat?>" name="kuant_no_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" value="<?php echo $no_surat->kuant_no_surat?>" name="kuant_no_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $no_surat->kual_no_surat?>" name="kual_no_surat" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" value="<?php echo $no_surat->kual_no_surat?>" name="kual_no_surat" class="form-control" placeholder="Kual/Mutu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $no_surat->waktu_no_surat?>" name="waktu_no_surat" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" value="<?php echo $no_surat->waktu_no_surat?>" name="waktu_no_surat" class="form-control" placeholder="Waktu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $no_surat->biaya_no_surat?>" name="biaya_no_surat" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" value="<?php echo $no_surat->biaya_no_surat?>" name="biaya_no_surat" class="form-control" placeholder="Biaya"  required/>
                                             </div>
                                         </div>
 
@@ -244,19 +244,19 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Arsipan Surat </b> 
-                                                <input  type="text" value="<?php echo $arsip->kuant_arsip_surat?>" name="kuant_arsip_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                                <input  type="text" value="<?php echo $arsip->kuant_arsip_surat?>" name="kuant_arsip_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b><br> </b> 
-                                                <input  type="text" value="<?php echo $arsip->kual_arsip_surat?>" name="kual_arsip_surat" class="form-control" placeholder="Kual/Mutu" ></input>
+                                                <input  type="text" value="<?php echo $arsip->kual_arsip_surat?>" name="kual_arsip_surat" class="form-control" placeholder="Kual/Mutu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $arsip->waktu_arsip_surat?>" name="waktu_arsip_surat" class="form-control" placeholder="Waktu" ></input>
+                                                <input  type="text" value="<?php echo $arsip->waktu_arsip_surat?>" name="waktu_arsip_surat" class="form-control" placeholder="Waktu"  required/>
                                             </div>
                                             <div class="col-md-3">
                                                 <b> <br></b> 
-                                                <input  type="text" value="<?php echo $arsip->biaya_arsip_surat?>" name="biaya_arsip_surat" class="form-control" placeholder="Biaya" ></input>
+                                                <input  type="text" value="<?php echo $arsip->biaya_arsip_surat?>" name="biaya_arsip_surat" class="form-control" placeholder="Biaya"  required/>
                                             </div>
                                         </div>
                                         <br>

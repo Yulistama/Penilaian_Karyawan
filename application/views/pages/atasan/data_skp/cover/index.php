@@ -66,7 +66,19 @@
     <div class="header">
         <div class="col-12">
             <div class="row">
-                <div class="col-12" style="margin-top: 50px; padding-top: 50px; background: white; min-height: 1000px">
+                <div class="col-12">
+                    <h1 class="page-header">
+                        Tambah SKP
+                    </h1>
+                    <ol class="breadcrumb">
+                      <li><a href="<?= base_url('atasan/dataskp') ?>"><i class=" fa fa-arrow-left"></i> Kembali</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>  
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12" style="margin-top: 0px; padding-top: 50px; background: white; min-height: 1000px">
                     <div class="row">
 
                         <div class="col-md-12">
@@ -82,8 +94,6 @@
                         </div>
 
                         <div class="col-md-12" style="margin-top: 50px; padding-left: 50px; padding-right:50px">
-                        <?php var_dump($sessionskp)?>
-                                <?php var_dump($session_cover)?>
                             <div class="row">
                                 <div class="col-12" style="border: solid 1px black; padding:5px 5px 5px 5px">
                                     <div class="row">
@@ -105,15 +115,16 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <b>Kode Jangka Waktu Penilaian </b> 
-                                            <input  type="text" name="kode_jangka_penilaian" class="form-control" placeholder="Masukan Kode Jangka Waktu Penilaian" ></input>
+                                            <input  type="text" name="kode_jangka_penilaian" class="form-control" placeholder="Masukan Kode Jangka Waktu Penilaian" required/>
                                         </div>
                                         <div class="col-md-4">
                                             <b>Jangka Waktu Penilaian </b> 
-                                            <input  type="text" name="jangka_waktu" class="form-control" placeholder="Masukan Jangka Waktu Penilaian" ></input>
+                                            <input  type="text" name="jangka_waktu" class="form-control" placeholder="Masukan Jangka Waktu Penilaian" required/>
                                         </div>
                                         <div class="col-md-4">
                                             <b>Tahun </b>
-                                            <select class="form-control" id="tahun" name="tahun">
+                                            <select class="form-control" id="tahun" name="tahun" required>
+                                                <option value="">--Pilih--</option>
                                                 <?php for($i=date('Y'); $i>=date('Y')-32; $i-=1) { ?>
                                                     <option value="<?php echo $i ?>"><?php echo $i ?></option>
                                                 <?php } ?>

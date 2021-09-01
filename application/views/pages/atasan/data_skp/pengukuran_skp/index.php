@@ -66,7 +66,19 @@
     <div class="header">
         <div class="col-12">
             <div class="row">
-                <div class="col-12" style="margin-top: 50px; padding-top: 50px; background: white; min-height: 2400px">
+                <div class="col-12">
+                    <h1 class="page-header">
+                        Tambah SKP
+                    </h1>
+                    <ol class="breadcrumb">
+                      <li><a href="<?= base_url('atasan/dataskp') ?>"><i class=" fa fa-arrow-left"></i> Kembali</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12" style="margin-top: 0px; padding-top: 50px; background: white; min-height: 2400px">
                     <div class="row">
 
                         <div class="col-md-12">
@@ -127,8 +139,6 @@
                             </div>    
                         </div>
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
-                        <?php var_dump($sessionskp)?>
-                        <?php var_dump($sessionpengukuran)?>
                             <div class="row">
                             <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                 <form method="post" action="<?= base_url('atasan/dataskp/v_add_pengukuran')?>">
@@ -136,19 +146,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Surat Masuk </b> 
-                                        <input  type="text" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" id="kuant_surat_masuk" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" id="kual_surat_masuk" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu_surat_masuk" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_surat_masuk" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya_surat_masuk" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_surat_masuk" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -156,19 +166,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kualitas_surat_masuk" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_surat_masuk" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kuantitas_surat_masuk" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_surat_masuk" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan_surat_masuk" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_surat_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp_surat_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_surat_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -176,19 +186,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Kode Surat</b> 
-                                        <input  type="text" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_kode_surat" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu_kode_surat" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_kode_surat" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya_kode_surat" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_kode_surat" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -196,19 +206,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kualitas_kode_surat" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_kode_surat" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kuantitas_kode_surat" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_kode_surat" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan_kode_surat" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_kode_surat" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp_kode_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_kode_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -216,19 +226,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi No Agenda </b> 
-                                        <input  type="text" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_no_agenda" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_no_agenda" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu_no_agenda" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_no_agenda" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya_no_agenda" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_no_agenda" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -236,19 +246,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kualitas_no_agenda" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_no_agenda" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kuantitas_no_agenda" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_no_agenda" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan_no_agenda" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_no_agenda" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp_no_agenda" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_no_agenda" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -256,19 +266,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi No Masuk </b> 
-                                        <input  type="text" name="kuant_no_masuk" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_no_masuk" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual_no_masuk" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_no_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu_no_masuk" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_no_masuk" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya_no_masuk" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_no_masuk" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -276,19 +286,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kualitas_no_masuk" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_no_masuk" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kuantitas_no_masuk" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_no_masuk" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan_no_masuk" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_no_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp_no_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_no_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -296,19 +306,19 @@
                                     <div class="row">
                                     <div class="col-md-3" style="font-size: small;">
                                         <b> Realisasi Mendistribusi Surat</b> 
-                                        <input  type="text" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -316,19 +326,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kualitas_distribusi_surat" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_distribusi_surat" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kuantitas_distribusi_surat" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_distribusi_surat" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan_distribusi_surat" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_distribusi_surat" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp_distribusi_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_distribusi_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -336,19 +346,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Arsipan </b> 
-                                        <input  type="text" name="kuant_arsipan" class="form-control" placeholder="Kuant/Output" ></input>
+                                        <input  type="text" name="kuant_arsipan" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kual_arsipan" class="form-control" placeholder="Kual/Mutu" readonly></input>
+                                        <input  type="text" name="kual_arsipan" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="waktu_arsipan" class="form-control" placeholder="Waktu" ></input>
+                                        <input  type="text" name="waktu_arsipan" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="biaya_arsipan" class="form-control" placeholder="Biaya" ></input>
+                                        <input  type="text" name="biaya_arsipan" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -356,19 +366,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" name="kualitas_arsipan" class="form-control" placeholder="Kualitas" ></input>
+                                        <input  type="text" name="kualitas_arsipan" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" name="kuantitas_arsipan" class="form-control" placeholder="Kuantitas" ></input>
+                                        <input  type="text" name="kuantitas_arsipan" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" name="perhitungan_arsipan" class="form-control" placeholder="Perhitungan" readonly></input>
+                                        <input  type="text" name="perhitungan_arsipan" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" name="nilaiskp_arsipan" class="form-control" placeholder="Nilai Capaian SKP" readonly></input>
+                                        <input  type="text" name="nilaiskp_arsipan" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -376,34 +386,34 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Pemeriksaan Reguler </b> 
-                                        <input  type="text" name="pemeriksaan_regular" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" id="pemeriksaan_regular" name="pemeriksaan_regular" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-3">
                                         <b> Tindak Lanjut </b> 
-                                        <input  type="text" name="tindak_lanjut" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" id="tindak_lanjut" name="tindak_lanjut" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" name="total1" class="form-control" placeholder="" readonly></input>
+                                        <input  type="text" id="total1" name="total1" class="form-control" placeholder="" readonly required/>
                                     </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Operator Komputer </b> 
-                                        <input  type="text" name="operator_komputer" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" id="operator_komputer" name="operator_komputer" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-3">
                                         <b> Kreatifitas </b> 
-                                        <input  type="text" name="kreatifitas" class="form-control" placeholder="Surat" ></input>
+                                        <input  type="text" id="kreatifitas" name="kreatifitas" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" name="total2" class="form-control" placeholder="" readonly></input>
+                                        <input  type="text" id="total2" name="total2" class="form-control" placeholder="" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -455,8 +465,43 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#kuant_surat_masuk').change(function(){ 
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_last_skp",
+                method : "GET",
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                     console.log('datas', data);
+                    //  console.log('datas', JSON.parse(data.tblformulir[0].target_arsipan_surat));
+                     let kuant_target = JSON.parse(data.tblformulir[0].target_menerima_surat_masuk);
+                     let kuant_relasi = $('#kuant_surat_masuk').val();
+                     $('#kual_surat_masuk').val(Number(kuant_relasi) + Number(kuant_target.kuant_surat_masuk) * 100);
+
+
+                }
+            });
+            return false;
+        });
+
+        $('#kreatifitas').change(function(){
+            var operator_komputer = $("#operator_komputer").val();
+            var kreatifitas = $("#kreatifitas").val();
+            $('#total2').val(Number(operator_komputer) + Number(kreatifitas));
+        });
+
+        $('#tindak_lanjut').change(function(){
+            let pemeriksaan_regular = $("#pemeriksaan_regular").val();
+            let tindak_lanjut = $("#tindak_lanjut").val();
+            $('#total1').val(Number(pemeriksaan_regular) + Number(tindak_lanjut));
+        });
+    });
+</script>

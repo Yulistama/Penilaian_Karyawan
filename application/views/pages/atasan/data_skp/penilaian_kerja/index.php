@@ -66,11 +66,23 @@
     <div class="header">
         <div class="col-12">
             <div class="row">
-                <div class="col-12" style="margin-top: 50px; padding-top: 50px; background: white; min-height: 1000px">
+                <div class="col-12">
+                    <h1 class="page-header">
+                        Tambah SKP
+                    </h1>
+                    <ol class="breadcrumb">
+                      <li><a href="<?= base_url('atasan/dataskp') ?>"><i class=" fa fa-arrow-left"></i> Kembali</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12" style="margin-top: 0px; padding-top: 50px; background: white; min-height: 1000px">
                     <div class="row">
 
                         <div class="col-md-12">
-                            <ul class="progressbar" style="">
+                            <ul class="progressbar">
                                 <li class="active" style="width:14%; list-style-type: none; z-index: 1000000">Data SKP</li>
                                 <li class="active" style="width:14%; list-style-type: none; z-index: 10000">Cover</li>
                                 <li class="active" style="width:14%; list-style-type: none; z-index: 1000">Formulir SKP</li>
@@ -157,23 +169,21 @@
                             </div>    
                         </div> 
                         <div class="col-md-12" style="margin-top: 30px; padding-left: 50px; padding-right:50px">
-                        <?php var_dump($sessionskp)?>
-                        <?php var_dump($sessionpenilaian_kerja)?>
                             <div class="row">
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <form method="post" action="<?= base_url('atasan/dataskp/v_add_penilaian_kerja')?>">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <b>Tanggal Pembuatan</b> 
-                                                <input  type="date" name="tgl_pembuatan" class="form-control" placeholder="Kode" ></input>
+                                                <input  type="date" name="tgl_pembuatan" class="form-control" placeholder="Kode" required/>
                                             </div>
                                             <div class="col-md-4">
                                                 <b>Tanggal Diterima pegawai</b> 
-                                                <input  type="date" name="tgl_diterima" class="form-control" placeholder="Kode" ></input>
+                                                <input  type="date" name="tgl_diterima" class="form-control" placeholder="Kode" required/>
                                             </div>
                                             <div class="col-md-4">
                                                 <b>Tanggal Diterima Atasan Pejabat</b> 
-                                                <input  type="date" name="tgl_diterima_atasan" class="form-control" placeholder="Kode" ></input>
+                                                <input  type="date" name="tgl_diterima_atasan" class="form-control" placeholder="Kode" required/>
                                             </div>
                                         </div>
                                         <br>

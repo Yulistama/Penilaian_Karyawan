@@ -9,6 +9,67 @@ class M_dataskp extends CI_Model {
         $query = $this->db->get();
         return $query;
     }
+
+    function last_id_skp()
+    {
+        $this->db->order_by('id', 'desc');
+        $this->db->limit(1);
+		return $this->db->get('t_skp');
+    }
+
+    function karyawan(){
+        $this->db->select('m_karyawan.id, m_karyawan.name, m_karyawan.nip, m_golongan.name AS golongan, m_jabatan.name AS jabatan, m_karyawan.unit_kerja');
+        $this->db->from('m_karyawan');
+        $this->db->join('m_golongan','m_golongan.id = m_karyawan.id_golongan','LEFT');      
+        $this->db->join('m_jabatan','m_jabatan.id = m_karyawan.id_jabatan','LEFT');  
+        $this->db->where('m_jabatan.id',25);    
+        $query = $this->db->get();
+        return $query;
+	}
+    
+    function penilai(){
+        $this->db->select('m_karyawan.id, m_karyawan.name, m_karyawan.nip, m_golongan.name AS golongan, m_jabatan.name AS jabatan, m_karyawan.unit_kerja');
+        $this->db->from('m_karyawan');
+        $this->db->join('m_golongan','m_golongan.id = m_karyawan.id_golongan','LEFT');      
+        $this->db->join('m_jabatan','m_jabatan.id = m_karyawan.id_jabatan','LEFT');  
+        $this->db->where('m_jabatan.id',11);    
+        $query = $this->db->get();
+        return $query;
+	}
+    
+    function atasan(){
+        $this->db->select('m_karyawan.id, m_karyawan.name, m_karyawan.nip, m_golongan.name AS golongan, m_jabatan.name AS jabatan, m_karyawan.unit_kerja');
+        $this->db->from('m_karyawan');
+        $this->db->join('m_golongan','m_golongan.id = m_karyawan.id_golongan','LEFT');      
+        $this->db->join('m_jabatan','m_jabatan.id = m_karyawan.id_jabatan','LEFT');  
+        $this->db->where('m_jabatan.id',2);    
+        $query = $this->db->get();
+        return $query;
+	}
+
+    function karyawan_by_id($where){
+        return $this->db->get_where('m_karyawan', array('id' => $where));
+	}
+
+    function jabatan_by_id($where){
+		return $this->db->get_where('m_jabatan', $where);
+	}
+    
+    function golongan_by_id($where){
+		return $this->db->get_where('m_golongan', $where);
+	}
+    
+    function tbl_formulir_by_id($where){
+		return $this->db->get_where('tbl_formulir', $where);
+	}
+
+    function jabatan(){
+        return $this->db->get('m_jabatan');
+    }
+    
+    function golongan(){
+        return $this->db->get('m_golongan');
+    }
     
     function data_skp_by_id($where)
     {
