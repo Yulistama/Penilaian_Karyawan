@@ -588,15 +588,15 @@ class DataSKP extends CI_Controller {
         $perhitungan_no_agenda          = $this->input->post('perhitungan_no_agenda');
         $nilaiskp_no_agenda             = $this->input->post('nilaiskp_no_agenda');
 
-        $kuant_no_surat                 = $this->input->post('kuant_no_surat');
-        $kual_no_surat                  = $this->input->post('kual_no_surat');
-        $waktu_no_surat                 = $this->input->post('waktu_no_surat');
-        $biaya_no_surat                 = $this->input->post('biaya_no_surat');
-        $biaya_no_surat                 = $this->input->post('biaya_no_surat');
-        $kualitas_no_surat              = $this->input->post('kualitas_no_surat');
-        $kuantitas_no_surat             = $this->input->post('kuantitas_no_surat');
-        $perhitungan_no_surat           = $this->input->post('perhitungan_no_surat');
-        $nilaiskp_no_surat              = $this->input->post('nilaiskp_no_surat');
+        $kuant_no_surat                 = $this->input->post('kuant_no_masuk');
+        $kual_no_surat                  = $this->input->post('kual_no_masuk');
+        $waktu_no_surat                 = $this->input->post('waktu_no_masuk');
+        $biaya_no_surat                 = $this->input->post('biaya_no_masuk');
+        $biaya_no_surat                 = $this->input->post('biaya_no_masuk');
+        $kualitas_no_surat              = $this->input->post('kualitas_no_masuk');
+        $kuantitas_no_surat             = $this->input->post('kuantitas_no_masuk');
+        $perhitungan_no_surat           = $this->input->post('perhitungan_no_masuk');
+        $nilaiskp_no_surat              = $this->input->post('nilaiskp_no_masuk');
 
         $kuant_arsipan                  = $this->input->post('kuant_arsipan');
         $kual_arsipan                   = $this->input->post('kual_arsipan');
@@ -1158,15 +1158,15 @@ class DataSKP extends CI_Controller {
         $perhitungan_no_agenda          = $this->input->post('perhitungan_no_agenda');
         $nilaiskp_no_agenda             = $this->input->post('nilaiskp_no_agenda');
 
-        $kuant_no_surat                 = $this->input->post('kuant_no_surat');
-        $kual_no_surat                  = $this->input->post('kual_no_surat');
-        $waktu_no_surat                 = $this->input->post('waktu_no_surat');
-        $biaya_no_surat                 = $this->input->post('biaya_no_surat');
-        $biaya_no_surat                 = $this->input->post('biaya_no_surat');
-        $kualitas_no_surat              = $this->input->post('kualitas_no_surat');
-        $kuantitas_no_surat             = $this->input->post('kuantitas_no_surat');
-        $perhitungan_no_surat           = $this->input->post('perhitungan_no_surat');
-        $nilaiskp_no_surat              = $this->input->post('nilaiskp_no_surat');
+        $kuant_no_surat                 = $this->input->post('kuant_no_masuk');
+        $kual_no_surat                  = $this->input->post('kual_no_masuk');
+        $waktu_no_surat                 = $this->input->post('waktu_no_masuk');
+        $biaya_no_surat                 = $this->input->post('biaya_no_masuk');
+        $biaya_no_surat                 = $this->input->post('biaya_no_masuk');
+        $kualitas_no_surat              = $this->input->post('kualitas_no_masuk');
+        $kuantitas_no_surat             = $this->input->post('kuantitas_no_masuk');
+        $perhitungan_no_surat           = $this->input->post('perhitungan_no_masuk');
+        $nilaiskp_no_surat              = $this->input->post('nilaiskp_no_masuk');
 
         $kuant_arsipan                  = $this->input->post('kuant_arsipan');
         $kual_arsipan                   = $this->input->post('kual_arsipan');
@@ -1405,6 +1405,18 @@ class DataSKP extends CI_Controller {
     {
         $last_id = $this->m_dataskp->last_id_skp()->result();
         $where = array('id' => $last_id[0]->id_tbl_formulir);
+        $data['tblformulir'] = $this->m_dataskp->tbl_formulir_by_id($where,'id')->result();
+        echo json_encode($data);
+    }
+    
+    // data by id skp
+    function get_by_id_skp()
+    {
+        $last_id = $this->input->post('id');
+        $where = array('id' => $last_id);
+        $t_skp_id = $this->m_dataskp->t_skp_by_id($where,'id')->result();
+
+        $where = array('id' => $t_skp_id[0]->id_tbl_formulir);
         $data['tblformulir'] = $this->m_dataskp->tbl_formulir_by_id($where,'id')->result();
         echo json_encode($data);
     }

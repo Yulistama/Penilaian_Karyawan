@@ -145,25 +145,25 @@
 
                                 <?php foreach($data_pengukuran as $item) { ?>
                                 <form method="post" action="<?= base_url('atasan/dataskp/update_pengukuran')?>">
-                                    <input type="hidden" name="id_skp" value="<?php echo $id?>"/>
+                                    <input type="hidden" id="id_skp" name="id_skp" value="<?php echo $id?>"/>
                                     <input type="hidden" name="id_pengukuran" value="<?php echo $item->id_pengukuran?>"/>
 
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Surat Masuk </b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuant_surat_masuk ?>" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuant_surat_masuk ?>" id="kuant_surat_masuk" name="kuant_surat_masuk" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kual_surat_masuk ?>" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kual_surat_masuk ?>" id="kual_surat_masuk" name="kual_surat_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->waktu_surat_masuk ?>" name="waktu_surat_masuk" class="form-control" placeholder="Waktu"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->waktu_surat_masuk ?>" id="waktu_surat_masuk" name="waktu_surat_masuk" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->biaya_surat_masuk ?>" name="biaya_surat_masuk" class="form-control" placeholder="Biaya"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->biaya_surat_masuk ?>" id="biaya_surat_masuk" name="biaya_surat_masuk" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -171,19 +171,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kualitas_surat_masuk ?>" name="kualitas_surat_masuk" class="form-control" placeholder="Kualitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kualitas_surat_masuk ?>" id="kualitas_surat_masuk" name="kualitas_surat_masuk" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuantitas_surat_masuk ?>" name="kuantitas_surat_masuk" class="form-control" placeholder="Kuantitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->kuantitas_surat_masuk ?>" id="kuantitas_surat_masuk" name="kuantitas_surat_masuk" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->perhitungan_surat_masuk ?>" name="perhitungan_surat_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->perhitungan_surat_masuk ?>" id="perhitungan_surat_masuk" name="perhitungan_surat_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->nilaiskp_surat_masuk ?>" name="nilaiskp_surat_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_surat_masuk->nilaiskp_surat_masuk ?>" id="nilaiskp_surat_masuk" name="nilaiskp_surat_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -271,19 +271,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi No Masuk </b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuant_no_surat ?>" name="kuant_no_masuk" class="form-control" placeholder="Kuant/Output"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuant_no_surat ?>" id="kuant_no_masuk" name="kuant_no_masuk" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kual_no_surat ?>" name="kual_no_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kual_no_surat ?>" id="kual_no_masuk" name="kual_no_masuk" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->waktu_no_surat ?>" name="waktu_no_masuk" class="form-control" placeholder="Waktu"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->waktu_no_surat ?>" id="waktu_no_masuk" name="waktu_no_masuk" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->biaya_no_surat ?>" name="biaya_no_masuk" class="form-control" placeholder="Biaya"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->biaya_no_surat ?>" id="biaya_no_masuk" name="biaya_no_masuk" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -291,19 +291,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kualitas_no_surat ?>" name="kualitas_no_masuk" class="form-control" placeholder="Kualitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kualitas_no_surat ?>" id="kualitas_no_masuk" name="kualitas_no_masuk" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuantitas_no_surat ?>" name="kuantitas_no_masuk" class="form-control" placeholder="Kuantitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->kuantitas_no_surat ?>" id="kuantitas_no_masuk" name="kuantitas_no_masuk" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->perhitungan_no_surat ?>" name="perhitungan_no_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->perhitungan_no_surat ?>" id="perhitungan_no_masuk" name="perhitungan_no_masuk" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_no_masuk->nilaiskp_no_surat ?>" name="nilaiskp_no_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_no_masuk->nilaiskp_no_surat ?>" id="nilaiskp_no_masuk" name="nilaiskp_no_masuk" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -311,19 +311,19 @@
                                     <div class="row">
                                     <div class="col-md-3" style="font-size: small;">
                                         <b> Realisasi Mendistribusi Surat</b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuant_distribusi_surat ?>" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuant_distribusi_surat ?>" id="kuant_distribusi_surat" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kual_distribusi_surat ?>" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kual_distribusi_surat ?>" id="kual_distribusi_surat" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->waktu_distribusi_surat ?>" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->waktu_distribusi_surat ?>" id="waktu_distribusi_surat" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->biaya_distribusi_surat ?>" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->biaya_distribusi_surat ?>" id="biaya_distribusi_surat" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -331,19 +331,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kualitas_distribusi_surat ?>" name="kualitas_distribusi_surat" class="form-control" placeholder="Kualitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kualitas_distribusi_surat ?>" id="kualitas_distribusi_surat" name="kualitas_distribusi_surat" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuantitas_distribusi_surat ?>" name="kuantitas_distribusi_surat" class="form-control" placeholder="Kuantitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->kuantitas_distribusi_surat ?>" id="kuantitas_distribusi_surat" name="kuantitas_distribusi_surat" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->perhitungan_distribusi_surat ?>" name="perhitungan_distribusi_surat" class="form-control" placeholder="Perhitungan" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->perhitungan_distribusi_surat ?>" id="perhitungan_distribusi_surat" name="perhitungan_distribusi_surat" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->nilaiskp_distribusi_surat ?>" name="nilaiskp_distribusi_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_mendistribusi_surat->nilaiskp_distribusi_surat ?>" id="nilaiskp_distribusi_surat" name="nilaiskp_distribusi_surat" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -351,19 +351,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Realisasi Arsipan </b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuant_arsipan ?>" name="kuant_arsipan" class="form-control" placeholder="Kuant/Output"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuant_arsipan ?>" id="kuant_arsipan" name="kuant_arsipan" class="form-control" placeholder="Kuant/Output"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kual_arsipan ?>" name="kual_arsipan" class="form-control" placeholder="Kual/Mutu" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kual_arsipan ?>" id="kual_arsipan" name="kual_arsipan" class="form-control" placeholder="Kual/Mutu" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->waktu_arsipan ?>" name="waktu_arsipan" class="form-control" placeholder="Waktu"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->waktu_arsipan ?>" id="waktu_arsipan" name="waktu_arsipan" class="form-control" placeholder="Waktu"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->biaya_arsipan ?>" name="biaya_arsipan" class="form-control" placeholder="Biaya"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->biaya_arsipan ?>" id="biaya_arsipan" name="biaya_arsipan" class="form-control" placeholder="Biaya"  required/>
                                     </div>
                                     </div>
                                     <br>
@@ -371,19 +371,19 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> <br> </b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kualitas_arsipan ?>" name="kualitas_arsipan" class="form-control" placeholder="Kualitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kualitas_arsipan ?>" id="kualitas_arsipan" name="kualitas_arsipan" class="form-control" placeholder="Kualitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuantitas_arsipan ?>" name="kuantitas_arsipan" class="form-control" placeholder="Kuantitas"  required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->kuantitas_arsipan ?>" id="kuantitas_arsipan" name="kuantitas_arsipan" class="form-control" placeholder="Kuantitas"  required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Perhitungan</b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->perhitungan_arsipan ?>" name="perhitungan_arsipan" class="form-control" placeholder="Perhitungan" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->perhitungan_arsipan ?>" id="perhitungan_arsipan" name="perhitungan_arsipan" class="form-control" placeholder="Perhitungan" readonly required/>
                                     </div>
                                     <div class="col-md-3">
                                         <b> Nilai Capaian SKP</b> 
-                                        <input  type="text" value="<?php echo $realisasi_arsipan->nilaiskp_arsipan ?>" name="nilaiskp_arsipan" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
+                                        <input  type="text" value="<?php echo $realisasi_arsipan->nilaiskp_arsipan ?>" id="nilaiskp_arsipan" name="nilaiskp_arsipan" class="form-control" placeholder="Nilai Capaian SKP" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -391,34 +391,34 @@
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Pemeriksaan Reguler </b> 
-                                        <input  type="text" value="<?php echo $item->pemeriksaan_reguler?>" name="pemeriksaan_regular" class="form-control" placeholder="Surat"  required/>
+                                        <input  type="text" value="<?php echo $item->pemeriksaan_reguler?>" id="pemeriksaan_regular" name="pemeriksaan_regular" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-3">
                                         <b> Tindak Lanjut </b> 
-                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" name="tindak_lanjut" class="form-control" placeholder="Surat"  required/>
+                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" id="tindak_lanjut" name="tindak_lanjut" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" name="total1" class="form-control" placeholder="" readonly required/>
+                                        <input  type="text" value="<?php echo $item->tindak_lanjut?>" id="total1" name="total1" class="form-control" placeholder="" readonly required/>
                                     </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                     <div class="col-md-3">
                                         <b> Operator Komputer </b> 
-                                        <input  type="text" value="<?php echo $item->operator_komputer?>" name="operator_komputer" class="form-control" placeholder="Surat"  required/>
+                                        <input  type="text" value="<?php echo $item->operator_komputer?>" id="operator_komputer" name="operator_komputer" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-3">
                                         <b> Kreatifitas </b> 
-                                        <input  type="text" value="<?php echo $item->kreatifitas?>" name="kreatifitas" class="form-control" placeholder="Surat"  required/>
+                                        <input  type="text" value="<?php echo $item->kreatifitas?>" id="kreatifitas" name="kreatifitas" class="form-control" placeholder="Surat"  required/>
                                     </div>
                                     
                                     <div class="col-md-2">
                                         <b> <br></b> 
-                                        <input  type="text" name="total2" class="form-control" placeholder="" readonly required/>
+                                        <input  type="text" id="total2" name="total2" class="form-control" placeholder="" readonly required/>
                                     </div>
                                     </div>
                                     <br>
@@ -488,3 +488,324 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        // s.perhitungan surat masuk
+        $('#kuant_surat_masuk').change(function(){
+            let id = $('#id_skp').val();
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                    let kuant_target = JSON.parse(data.tblformulir[0].target_menerima_surat_masuk);
+                    let kuant_relasi = $('#kuant_surat_masuk').val();
+                    $('#kual_surat_masuk').val(Number(kuant_relasi) + Number(kuant_target.kuant_surat_masuk) * 100);
+                    
+                    let kualitas_surat_masuk = $("#kualitas_surat_masuk").val();
+                    let kuantitas_surat_masuk = $("#kuantitas_surat_masuk").val();
+                    let kual_surat_masuk = $("#kual_surat_masuk").val();
+                    $('#perhitungan_surat_masuk').val((Number(kual_surat_masuk) * 2) + Number(kualitas_surat_masuk) + Number(kuantitas_surat_masuk));
+                    
+                    let perhitungan_surat_masuk = $("#perhitungan_surat_masuk").val();
+                    $('#nilaiskp_surat_masuk').val(Number(perhitungan_surat_masuk) / 3);
+                }
+            });
+            return false;
+        });
+
+        $('#kualitas_surat_masuk').change(function(){
+            let kualitas_surat_masuk = $("#kualitas_surat_masuk").val();
+            let kuantitas_surat_masuk = $("#kuantitas_surat_masuk").val();
+            let kual_surat_masuk = $("#kual_surat_masuk").val();
+            $('#perhitungan_surat_masuk').val((Number(kual_surat_masuk) * 2) + Number(kualitas_surat_masuk) + Number(kuantitas_surat_masuk));
+
+            let perhitungan_surat_masuk = $("#perhitungan_surat_masuk").val();
+            $('#nilaiskp_surat_masuk').val(Number(perhitungan_surat_masuk) / 3);
+
+        });
+        
+        $('#kuantitas_surat_masuk').change(function(){
+            let kualitas_surat_masuk = $("#kualitas_surat_masuk").val();
+            let kuantitas_surat_masuk = $("#kuantitas_surat_masuk").val();
+            let kual_surat_masuk = $("#kual_surat_masuk").val();
+            $('#perhitungan_surat_masuk').val((Number(kual_surat_masuk) * 2) + Number(kualitas_surat_masuk) + Number(kuantitas_surat_masuk));
+
+            let perhitungan_surat_masuk = $("#perhitungan_surat_masuk").val();
+            $('#nilaiskp_surat_masuk').val(Number(perhitungan_surat_masuk)/3);
+        });
+        // e.perhitungan surat masuk
+
+        // s.perhitungan relasi kode surat
+        $('#kuant_kode_surat').change(function(){
+            let id = $('#id_skp').val(); 
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                method : "POST",
+                async : true,
+                data : {id: id},
+                dataType : 'json',
+                success: function(data){
+                    let kuant_target = JSON.parse(data.tblformulir[0].target_kode_surat);
+                    let kuant_relasi = $('#kuant_kode_surat').val();
+                    $('#kual_kode_surat').val(Number(kuant_relasi) + Number(kuant_target.kuant_kode_surat) * 100);
+
+                    let kualitas_kode_surat = $("#kualitas_kode_surat").val();
+                    let kuantitas_kode_surat = $("#kuantitas_kode_surat").val();
+                    let kual_kode_surat = $("#kual_kode_surat").val();
+                    $('#perhitungan_kode_surat').val((Number(kual_kode_surat) * 2) + Number(kualitas_kode_surat) + Number(kuantitas_kode_surat));
+
+                    let perhitungan_kode_surat = $("#perhitungan_kode_surat").val();
+                    $('#nilaiskp_kode_surat').val(Number(perhitungan_kode_surat) / 3);
+                }
+            });
+            return false;
+        });
+
+        $('#kualitas_kode_surat').change(function(){
+            let kualitas_kode_surat = $("#kualitas_kode_surat").val();
+            let kuantitas_kode_surat = $("#kuantitas_kode_surat").val();
+            let kual_kode_surat = $("#kual_kode_surat").val();
+            $('#perhitungan_kode_surat').val((Number(kual_kode_surat) * 2) + Number(kualitas_kode_surat) + Number(kuantitas_kode_surat));
+
+            let perhitungan_kode_surat = $("#perhitungan_kode_surat").val();
+            $('#nilaiskp_kode_surat').val(Number(perhitungan_kode_surat) / 3);
+
+        });
+        
+        $('#kuantitas_kode_surat').change(function(){
+            let kualitas_kode_surat = $("#kualitas_kode_surat").val();
+            let kuantitas_kode_surat = $("#kuantitas_kode_surat").val();
+            let kual_kode_surat = $("#kual_kode_surat").val();
+            $('#perhitungan_kode_surat').val((Number(kual_kode_surat) * 2) + Number(kualitas_kode_surat) + Number(kuantitas_kode_surat));
+
+            let perhitungan_kode_surat = $("#perhitungan_kode_surat").val();
+            $('#nilaiskp_kode_surat').val(Number(perhitungan_kode_surat) / 3);
+
+        });
+        // e.perhitungan relasi kode surat
+
+        // s.perhitungan relasi No Agenda
+        $('#kuant_no_agenda').change(function(){ 
+            let id = $('#id_skp').val();
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                    let kuant_target = JSON.parse(data.tblformulir[0].target_memberi_no_agenda);
+                    let kuant_relasi = $('#kuant_no_agenda').val();
+                    $('#kual_no_agenda').val(Number(kuant_relasi) + Number(kuant_target.kuant_no_agenda) * 100);
+
+                    let kualitas_no_agenda = $("#kualitas_no_agenda").val();
+                    let kuantitas_no_agenda = $("#kuantitas_no_agenda").val();
+                    let kual_no_agenda = $("#kual_no_agenda").val();
+                    $('#perhitungan_no_agenda').val((Number(kual_no_agenda) * 2) + Number(kualitas_no_agenda) + Number(kuantitas_no_agenda));
+
+                    let perhitungan_no_agenda = $("#perhitungan_no_agenda").val();
+                    $('#nilaiskp_no_agenda').val(Number(perhitungan_no_agenda) / 3);
+                }
+            });
+            return false;
+        });
+
+        $('#kualitas_no_agenda').change(function(){
+            let kualitas_no_agenda = $("#kualitas_no_agenda").val();
+            let kuantitas_no_agenda = $("#kuantitas_no_agenda").val();
+            let kual_no_agenda = $("#kual_no_agenda").val();
+            $('#perhitungan_no_agenda').val((Number(kual_no_agenda) * 2) + Number(kualitas_no_agenda) + Number(kuantitas_no_agenda));
+
+            let perhitungan_no_agenda = $("#perhitungan_no_agenda").val();
+            $('#nilaiskp_no_agenda').val(Number(perhitungan_no_agenda) / 3);
+
+        });
+        
+        $('#kuantitas_no_agenda').change(function(){
+            let kualitas_no_agenda = $("#kualitas_no_agenda").val();
+            let kuantitas_no_agenda = $("#kuantitas_no_agenda").val();
+            let kual_no_agenda = $("#kual_no_agenda").val();
+            $('#perhitungan_no_agenda').val((Number(kual_no_agenda) * 2) + Number(kualitas_no_agenda) + Number(kuantitas_no_agenda));
+
+            let perhitungan_no_agenda = $("#perhitungan_no_agenda").val();
+            $('#nilaiskp_no_agenda').val(Number(perhitungan_no_agenda) / 3);
+
+        });
+        // e.perhitungan relasi No Agenda
+        
+        // s.perhitungan relasi No Masuk
+        $('#kuant_no_masuk').change(function(){ 
+            let id = $('#id_skp').val();
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                    let kuant_target = JSON.parse(data.tblformulir[0].target_memberi_no_surat);
+                    let kuant_relasi = $('#kuant_no_masuk').val();
+                    $('#kual_no_masuk').val(Number(kuant_relasi) + Number(kuant_target.kuant_no_surat) * 100);
+
+                    let kualitas_no_masuk = $("#kualitas_no_masuk").val();
+                    let kuantitas_no_masuk = $("#kuantitas_no_masuk").val();
+                    let kual_no_masuk = $("#kual_no_masuk").val();
+                    $('#perhitungan_no_masuk').val((Number(kual_no_masuk) * 2) + Number(kualitas_no_masuk) + Number(kuantitas_no_masuk));
+
+                    let perhitungan_no_masuk = $("#perhitungan_no_masuk").val();
+                    $('#nilaiskp_no_masuk').val(Number(perhitungan_no_masuk) / 3);
+                }
+            });
+            return false;
+        });
+
+        $('#kualitas_no_masuk').change(function(){
+            let kualitas_no_masuk = $("#kualitas_no_masuk").val();
+            let kuantitas_no_masuk = $("#kuantitas_no_masuk").val();
+            let kual_no_masuk = $("#kual_no_masuk").val();
+            $('#perhitungan_no_masuk').val((Number(kual_no_masuk) * 2) + Number(kualitas_no_masuk) + Number(kuantitas_no_masuk));
+
+            let perhitungan_no_masuk = $("#perhitungan_no_masuk").val();
+            $('#nilaiskp_no_masuk').val(Number(perhitungan_no_masuk) / 3);
+
+        });
+        
+        $('#kuantitas_no_masuk').change(function(){
+            let kualitas_no_masuk = $("#kualitas_no_masuk").val();
+            let kuantitas_no_masuk = $("#kuantitas_no_masuk").val();
+            let kual_no_masuk = $("#kual_no_masuk").val();
+            $('#perhitungan_no_masuk').val((Number(kual_no_masuk) * 2) + Number(kualitas_no_masuk) + Number(kuantitas_no_masuk));
+
+            let perhitungan_no_masuk = $("#perhitungan_no_masuk").val();
+            $('#nilaiskp_no_masuk').val(Number(perhitungan_no_masuk) / 3);
+
+        });
+        // e.perhitungan relasi No Masuk
+        
+        // s.perhitungan Mendistribusi Surat
+        $('#kuant_distribusi_surat').change(function(){ 
+            let id = $('#id_skp').val();
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                    console.log('datas', data);
+                    let kuant_target = JSON.parse(data.tblformulir[0].target_mendistribusikan_surat);
+                    let kuant_relasi = $('#kuant_distribusi_surat').val();
+                    $('#kual_distribusi_surat').val(Number(kuant_relasi) + Number(kuant_target.kuant_distribusi_surat) * 100);
+
+                    let kualitas_distribusi_surat = $("#kualitas_distribusi_surat").val();
+                    let kuantitas_distribusi_surat = $("#kuantitas_distribusi_surat").val();
+                    let kual_distribusi_surat = $("#kual_distribusi_surat").val();
+                    $('#perhitungan_distribusi_surat').val((Number(kual_distribusi_surat) * 2) + Number(kualitas_distribusi_surat) + Number(kuantitas_distribusi_surat));
+
+                    let perhitungan_distribusi_surat = $("#perhitungan_distribusi_surat").val();
+                    $('#nilaiskp_distribusi_surat').val(Number(perhitungan_distribusi_surat) / 3);
+                }
+            });
+            return false;
+        });
+
+        $('#kualitas_distribusi_surat').change(function(){
+            let kualitas_distribusi_surat = $("#kualitas_distribusi_surat").val();
+            let kuantitas_distribusi_surat = $("#kuantitas_distribusi_surat").val();
+            let kual_distribusi_surat = $("#kual_distribusi_surat").val();
+            $('#perhitungan_distribusi_surat').val((Number(kual_distribusi_surat) * 2) + Number(kualitas_distribusi_surat) + Number(kuantitas_distribusi_surat));
+
+            let perhitungan_distribusi_surat = $("#perhitungan_distribusi_surat").val();
+            $('#nilaiskp_distribusi_surat').val(Number(perhitungan_distribusi_surat) / 3);
+
+        });
+        
+        $('#kuantitas_distribusi_surat').change(function(){
+            let kualitas_distribusi_surat = $("#kualitas_distribusi_surat").val();
+            let kuantitas_distribusi_surat = $("#kuantitas_distribusi_surat").val();
+            let kual_distribusi_surat = $("#kual_distribusi_surat").val();
+            $('#perhitungan_distribusi_surat').val((Number(kual_distribusi_surat) * 2) + Number(kualitas_distribusi_surat) + Number(kuantitas_distribusi_surat));
+
+            let perhitungan_distribusi_surat = $("#perhitungan_distribusi_surat").val();
+            $('#nilaiskp_distribusi_surat').val(Number(perhitungan_distribusi_surat) / 3);
+
+        });
+        // e.perhitungan Mendistribusi Surat
+        
+        // s.perhitungan Arsip Surat
+        $('#kuant_arsipan').change(function(){ 
+            let id = $('#id_skp').val();
+            $.ajax({
+                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                method : "POST",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                    let kuant_target = JSON.parse(data.tblformulir[0].target_arsipan_surat);
+                    let kuant_relasi = $('#kuant_arsipan').val();
+                    $('#kual_arsipan').val(Number(kuant_relasi) + Number(kuant_target.kuant_arsip_surat) * 100);
+
+                    let kualitas_arsipan = $("#kualitas_arsipan").val();
+                    let kuantitas_arsipan = $("#kuantitas_arsipan").val();
+                    let kual_arsipan = $("#kual_arsipan").val();
+                    $('#perhitungan_arsipan').val((Number(kual_arsipan) * 2) + Number(kualitas_arsipan) + Number(kuantitas_arsipan));
+
+                    let perhitungan_arsipan = $("#perhitungan_arsipan").val();
+                    $('#nilaiskp_arsipan').val(Number(perhitungan_arsipan) / 3);
+                }
+            });
+            return false;
+        });
+
+        $('#kualitas_arsipan').change(function(){
+            let kualitas_arsipan = $("#kualitas_arsipan").val();
+            let kuantitas_arsipan = $("#kuantitas_arsipan").val();
+            let kual_arsipan = $("#kual_arsipan").val();
+            $('#perhitungan_arsipan').val((Number(kual_arsipan) * 2) + Number(kualitas_arsipan) + Number(kuantitas_arsipan));
+
+            let perhitungan_arsipan = $("#perhitungan_arsipan").val();
+            $('#nilaiskp_arsipan').val(Number(perhitungan_arsipan) / 3);
+
+        });
+        
+        $('#kuantitas_arsipan').change(function(){
+            let kualitas_arsipan = $("#kualitas_arsipan").val();
+            let kuantitas_arsipan = $("#kuantitas_arsipan").val();
+            let kual_arsipan = $("#kual_arsipan").val();
+            $('#perhitungan_arsipan').val((Number(kual_arsipan) * 2) + Number(kualitas_arsipan) + Number(kuantitas_arsipan));
+
+            let perhitungan_arsipan = $("#perhitungan_arsipan").val();
+            $('#nilaiskp_arsipan').val(Number(perhitungan_arsipan) / 3);
+
+        });
+        // e.perhitungan Arsip Surat
+        
+        $('#operator_komputer').change(function(){
+            let operator_komputer = $("#operator_komputer").val();
+            let kreatifitas = $("#kreatifitas").val();
+            $('#total2').val(Number(operator_komputer) + Number(kreatifitas));
+        });
+        $('#kreatifitas').change(function(){
+            let operator_komputer = $("#operator_komputer").val();
+            let kreatifitas = $("#kreatifitas").val();
+            $('#total2').val(Number(operator_komputer) + Number(kreatifitas));
+        });
+
+        $('#pemeriksaan_regular').change(function(){
+            let pemeriksaan_regular = $("#pemeriksaan_regular").val();
+            let tindak_lanjut = $("#tindak_lanjut").val();
+            $('#total1').val(Number(pemeriksaan_regular) + Number(tindak_lanjut));
+        });
+        $('#tindak_lanjut').change(function(){
+            let pemeriksaan_regular = $("#pemeriksaan_regular").val();
+            let tindak_lanjut = $("#tindak_lanjut").val();
+            $('#total1').val(Number(pemeriksaan_regular) + Number(tindak_lanjut));
+        });
+    });
+</script>

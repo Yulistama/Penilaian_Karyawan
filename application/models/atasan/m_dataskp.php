@@ -62,6 +62,10 @@ class M_dataskp extends CI_Model {
     function tbl_formulir_by_id($where){
 		return $this->db->get_where('tbl_formulir', $where);
 	}
+    
+    function t_skp_by_id($where){
+		return $this->db->get_where('t_skp', $where);
+	}
 
     function jabatan(){
         return $this->db->get('m_jabatan');
