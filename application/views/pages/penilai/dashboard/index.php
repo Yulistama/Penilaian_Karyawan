@@ -7,13 +7,13 @@
 		  <li><a href="#">Home</a></li>
 		</ol>
         <div class="row">
-            <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="col-md-6 col-sm-12 col-xs-12">
 				<div class="board">
                     <div class="panel panel-primary">
 					    <div class="number">
 					    	<h3>
-					    		<h3>44,023</h3>
-					    		<small>Daily Visits</small>
+					    		<h3>50</h3>
+					    		<small>Data Pegawai</small>
 					    	</h3> 
 					    </div>
 					    <div class="icon">
@@ -23,7 +23,7 @@
 					</div>
                 </div>
 					
-				<div class="col-md-3 col-sm-12 col-xs-12">
+				<!-- <div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="board">
                         <div class="panel panel-primary">
 						    <div class="number">
@@ -53,15 +53,15 @@
 						    </div>
                         </div>
 					</div>
-                </div>
+                </div> -->
 					
-				<div class="col-md-3 col-sm-12 col-xs-12">
+				<div class="col-md-6 col-sm-12 col-xs-12">
 					<div class="board">
                         <div class="panel panel-primary">
 						    <div class="number">
 						    	<h3>
-						    		<h3>89,645</h3>
-						    		<small>Daily Profits</small>
+						    		<h3>10</h3>
+						    		<small>Pegawai Dinilai</small>
 						    	</h3> 
 						    </div>
 						    <div class="icon">

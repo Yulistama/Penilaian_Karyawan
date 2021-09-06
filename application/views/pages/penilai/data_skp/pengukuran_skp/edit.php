@@ -102,7 +102,7 @@
                                             <h4><b>Data SKP</b></h4>
                                         </div>
                                         <div class="col-md-6" style="text-align: right; margin-top:20px; padding-right:50px">
-                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>atasan/dataskp/edit_data_skp/<?php echo $id; ?>">Ubah</a></b></h5>
+                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>penilai/dataskp/edit_data_skp/<?php echo $id; ?>">Ubah</a></b></h5>
                                             <h4 style="display:inline">1/7</h4>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@
                                             <h4><b>Cover</b></h4>
                                         </div>
                                         <div class="col-md-6" style="text-align: right; margin-top:20px; padding-right:50px">
-                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>atasan/dataskp/edit_cover/<?php echo $id; ?>">Ubah</a></b></h5>
+                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>penilai/dataskp/edit_cover/<?php echo $id; ?>">Ubah</a></b></h5>
                                             <h4 style="display:inline">2/7</h4>
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                             <h4><b>Fromulir SKP</b></h4>
                                         </div>
                                         <div class="col-md-6" style="text-align: right; margin-top:20px; padding-right:50px">
-                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>atasan/dataskp/edit_formulir/<?php echo $id; ?>">Ubah</a></b></h5>
+                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>penilai/dataskp/edit_formulir/<?php echo $id; ?>">Ubah</a></b></h5>
                                             <h4 style="display:inline">3/7</h4>
                                         </div>
                                     </div>
@@ -144,7 +144,7 @@
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
 
                                 <?php foreach($data_pengukuran as $item) { ?>
-                                <form method="post" action="<?= base_url('atasan/dataskp/update_pengukuran')?>">
+                                <form method="post" action="<?= base_url('penilai/dataskp/update_pengukuran')?>">
                                     <input type="hidden" id="id_skp" name="id_skp" value="<?php echo $id?>"/>
                                     <input type="hidden" name="id_pengukuran" value="<?php echo $item->id_pengukuran?>"/>
 
@@ -445,7 +445,7 @@
                                             <h4><b>Prilaku Kerja PNS</b></h4>
                                         </div>
                                         <div class="col-md-6" style="text-align: right; margin-top:20px; padding-right:50px">
-                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>atasan/dataskp/edit_prilaku_kerja/<?php echo $id; ?>">Ubah</a></b></h5>
+                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>penilai/dataskp/edit_prilaku_kerja/<?php echo $id; ?>">Ubah</a></b></h5>
                                             <h4 style="display:inline">5/7</h4>
                                         </div>
                                     </div>
@@ -460,7 +460,7 @@
                                             <h4><b>Penilaian Prestasi Kerja PNS</b></h4>
                                         </div>
                                         <div class="col-md-6" style="text-align: right; margin-top:20px; padding-right:50px">
-                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>atasan/dataskp/edit_penilaian_kerja/<?php echo $id; ?>">Ubah</a></b></h5>
+                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>penilai/dataskp/edit_penilaian_kerja/<?php echo $id; ?>">Ubah</a></b></h5>
                                             <h4 style="display:inline">6/7</h4>
                                         </div>
                                     </div>
@@ -475,7 +475,7 @@
                                             <h4><b>SPT DP3 Horizon</b></h4>
                                         </div>
                                         <div class="col-md-6" style="text-align: right; margin-top:20px; padding-right:50px">
-                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>atasan/dataskp/edit_spt/<?php echo $id; ?>">Ubah</a></b></h5>
+                                            <h5 style="display:inline; margin-right:10px"><b><a style="text-decoration: none; color: green;" href="<?php echo base_url(); ?>penilai/dataskp/edit_spt/<?php echo $id; ?>">Ubah</a></b></h5>
                                             <h4 style="display:inline">7/7</h4>
                                         </div>
                                     </div>
@@ -496,7 +496,7 @@
         $('#kuant_surat_masuk').change(function(){
             let id = $('#id_skp').val();
             $.ajax({
-                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                url : "<?php echo base_url(); ?>penilai/dataskp/get_by_id_skp",
                 method : "POST",
                 data : {id: id},
                 async : true,
@@ -544,7 +544,7 @@
         $('#kuant_kode_surat').change(function(){
             let id = $('#id_skp').val(); 
             $.ajax({
-                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                url : "<?php echo base_url(); ?>penilai/dataskp/get_by_id_skp",
                 method : "POST",
                 async : true,
                 data : {id: id},
@@ -593,7 +593,7 @@
         $('#kuant_no_agenda').change(function(){ 
             let id = $('#id_skp').val();
             $.ajax({
-                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                url : "<?php echo base_url(); ?>penilai/dataskp/get_by_id_skp",
                 method : "POST",
                 data : {id: id},
                 async : true,
@@ -642,7 +642,7 @@
         $('#kuant_no_masuk').change(function(){ 
             let id = $('#id_skp').val();
             $.ajax({
-                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                url : "<?php echo base_url(); ?>penilai/dataskp/get_by_id_skp",
                 method : "POST",
                 data : {id: id},
                 async : true,
@@ -691,7 +691,7 @@
         $('#kuant_distribusi_surat').change(function(){ 
             let id = $('#id_skp').val();
             $.ajax({
-                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                url : "<?php echo base_url(); ?>penilai/dataskp/get_by_id_skp",
                 method : "POST",
                 data : {id: id},
                 async : true,
@@ -741,7 +741,7 @@
         $('#kuant_arsipan').change(function(){ 
             let id = $('#id_skp').val();
             $.ajax({
-                url : "<?php echo base_url(); ?>atasan/dataskp/get_by_id_skp",
+                url : "<?php echo base_url(); ?>penilai/dataskp/get_by_id_skp",
                 method : "POST",
                 data : {id: id},
                 async : true,
