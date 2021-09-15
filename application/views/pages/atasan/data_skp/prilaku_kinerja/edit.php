@@ -217,10 +217,10 @@
 
                                     <div class="row">
                                         <div class="col-12" style="text-align: center">
-                                        <button type="reset" class="btn btn-danger">
-                                        <i class=" fa fa-trash-alt"></i> Reset </button>
+                                        <!-- <button type="reset" class="btn btn-danger">
+                                        <i class=" fa fa-trash-alt"></i> Reset </button> -->
 
-                                        <button type="submit" class="btn btn-success">
+                                        <button type="submit" class="btn btn-success btn-lg">
                                         <i class=" fa fa-save"></i> Save </button>
                                     </div>
                                     </div>

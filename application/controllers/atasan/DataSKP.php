@@ -16,7 +16,8 @@ class DataSKP extends CI_Controller {
     public function index()
     {
         $data['data_skp'] = $this->m_dataskp->data_skp()->result();
-
+        $data['message'] = "Hasil Capaian Sasaran Kerja Pegawai (SKP) anda telah dinilai &apikey";
+        
         $title['title'] = 'Web Penilaian Kinerja Karyawan';
         $this->load->view('template/v_header' , $title);
         $this->load->view('template/v_sidebar');

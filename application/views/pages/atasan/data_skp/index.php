@@ -18,6 +18,7 @@
                                 <th>Jabatan</th>
                                 <th>Unit Kerja</th>
                                 <th>Action</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,6 +34,11 @@
                             <td><?php echo $item->jabatan_dinilai ?></td>
                             <td><?php echo $item->unit_kerja_dinilai ?></td>
                             <td class="text-center">
+                                <iframe style="display:block; visibility:hidden" name="iframe_a" height="0px" width="0px"></iframe>
+                                <a class="badge badge-info" target="iframe_a" href="https://api.callmebot.com/whatsapp.php?phone=+6285161530411&text=<?php echo $message?>=442921" onclick="return alert('Whatsapp Terkirim kepegawai')"> Whatsapp </a><br>
+                                <a class="badge badge-danger" target="_blank" href="<?php echo base_url(); ?>atasan/DataPdf/detail/<?php echo $item->id; ?>"> Export </a>
+                            </td>
+                            <td class="text-center">
                                 <a class="badge badge-primary" href="<?php echo base_url(); ?>atasan/dataskp/edit_skp/<?php echo $item->id; ?>" > <i class="fa  fa-edit" > </i> Edit </a><br>
                                 <a class="badge badge-danger" id="btn-hapus" href="<?php echo base_url(); ?>atasan/dataskp/hapus/<?php echo $item->id; ?>"> <i class="fa fa-trash"> </i> Delete </a>
                             </td>
@@ -47,9 +53,9 @@
     </div>
 </div>
 
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/w/dt/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/datatables.min.js"></script>
 <script>
-    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/w/dt/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/datatables.min.js"></script>
     $(document).ready(function() {
     $('#example').DataTable();
 } );
