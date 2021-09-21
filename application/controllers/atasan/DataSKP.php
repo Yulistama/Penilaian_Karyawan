@@ -348,7 +348,7 @@ class DataSKP extends CI_Controller {
 
     public function v_add_cover()
     {
-        $kode_jangka_penilaian = $this->input->post('kode_jangka_penilaian');
+        // $kode_jangka_penilaian = $this->input->post('kode_jangka_penilaian');
         $jangka_waktu = $this->input->post('jangka_waktu');
         $tahun = $this->input->post('tahun');
         $id_cover = null;
@@ -357,7 +357,7 @@ class DataSKP extends CI_Controller {
         if($this->session->userdata('id_cover')){
             $id = $this->session->userdata('id_cover');
             $data_cover = array(
-                    'kode_jangka_penilaian' => $kode_jangka_penilaian,
+                    // 'kode_jangka_penilaian' => $kode_jangka_penilaian,
                     'jangka_waktu_penilaian' => $jangka_waktu,
                     'tahun' => $tahun,
             );
@@ -370,7 +370,7 @@ class DataSKP extends CI_Controller {
             $id_cover = $id;
         }else{
             $data_cover = array(
-                    'kode_jangka_penilaian' => $kode_jangka_penilaian,
+                    // 'kode_jangka_penilaian' => $kode_jangka_penilaian,
                     'jangka_waktu_penilaian' => $jangka_waktu,
                     'tahun' => $tahun,
                 );
@@ -406,7 +406,7 @@ class DataSKP extends CI_Controller {
 
     public function v_add_formulir()
     {
-        $kode_formulir            = $this->input->post('kode_formulir');
+        // $kode_formulir            = $this->input->post('kode_formulir');
 
         $kuant_surat_masuk        = $this->input->post('kuant_surat_masuk');
         $kual_surat_masuk         = $this->input->post('kual_surat_masuk');
@@ -487,7 +487,7 @@ class DataSKP extends CI_Controller {
         if($this->session->userdata('id_formulir')){
             $id = $this->session->userdata('id_formulir');
             $data_formulir = array(
-                'kode_formulir' => $kode_formulir,
+                // 'kode_formulir' => $kode_formulir,
                 'target_menerima_surat_masuk' => $json_menerima_surat_masuk,
                 'target_mendistribusikan_surat' => $json_distribusi_surat,
                 'target_kode_surat' => $json_kode_surat,
@@ -506,7 +506,7 @@ class DataSKP extends CI_Controller {
         }else{
             
             $data_formulir = array(
-                'kode_formulir' => $kode_formulir,
+                // 'kode_formulir' => $kode_formulir,
                 'target_menerima_surat_masuk' => $json_menerima_surat_masuk,
                 'target_mendistribusikan_surat' => $json_distribusi_surat,
                 'target_kode_surat' => $json_kode_surat,

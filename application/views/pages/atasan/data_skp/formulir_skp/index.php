@@ -127,12 +127,12 @@
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <form method="post" action="<?= base_url('atasan/dataskp/v_add_formulir')?>">
 
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-3">
                                                 <b>Kode Formulir </b> 
                                                 <input  type="text" name="kode_formulir" class="form-control" placeholder="Kode"required/>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         
                                         <br>
                                         <div class="row">
@@ -156,27 +156,6 @@
                                         <br>
 
                                         <div class="row">
-                                            <div class="col-md-3" style="font-size: small;">
-                                                <b>Target Mendistribusikan Surat </b> 
-                                                <input  type="text" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output" required/>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <b> <br></b> 
-                                                <input  type="text" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" required/>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <b> <br></b> 
-                                                <input  type="text" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu" required/>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <b> <br></b> 
-                                                <input  type="text" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya" required/>
-                                            </div>
-                                        </div>
-                                        <br>
-
-
-                                        <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Kode Surat </b> 
                                                 <input  type="text" name="kuant_kode_surat" class="form-control" placeholder="Kuant/Output" required/>
@@ -194,8 +173,8 @@
                                                 <input  type="text" name="biaya_kode_surat" class="form-control" placeholder="Biaya" required/>
                                             </div>
                                         </div>
-
                                         <br>
+
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Memberi No Agenda </b> 
@@ -215,6 +194,7 @@
                                             </div>
                                         </div>
                                         <br>
+
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Memberi No Surat </b> 
@@ -236,6 +216,27 @@
 
                                         
                                         <br>
+
+                                        <div class="row">
+                                            <div class="col-md-3" style="font-size: small;">
+                                                <b>Target Mendistribusikan Surat </b> 
+                                                <input  type="text" name="kuant_distribusi_surat" class="form-control" placeholder="Kuant/Output" required/>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b> <br></b> 
+                                                <input  type="text" name="kual_distribusi_surat" class="form-control" placeholder="Kual/Mutu" required/>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b> <br></b> 
+                                                <input  type="text" name="waktu_distribusi_surat" class="form-control" placeholder="Waktu" required/>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <b> <br></b> 
+                                                <input  type="text" name="biaya_distribusi_surat" class="form-control" placeholder="Biaya" required/>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <b>Target Arsipan Surat </b> 

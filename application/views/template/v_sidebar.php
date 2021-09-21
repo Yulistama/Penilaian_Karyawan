@@ -30,9 +30,9 @@
                         <li>
                             <a class="<?php if((current_url() == base_url('atasan/dataskp')) || (current_url() == base_url('atasan/dataskp/add_data_skp')) || (current_url() == base_url('atasan/dataskp/add_cover')) || (current_url() == base_url('atasan/dataskp/add_formulir')) || (current_url() == base_url('atasan/dataskp/add_pengukuran_capa')) || (current_url() == base_url('atasan/dataskp/add_prilaku_kerja')) || (current_url() == base_url('atasan/dataskp/add_penilaian_kerja')) || (current_url() == base_url('atasan/dataskp/add_spt')) ){ ?> active-menu <?php } ?>" href="<?= base_url('atasan/dataskp') ?>"><i class="fa fa-edit"></i> Data SKP</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="<?= current_url() == base_url('atasan/useraktif') ? 'active-menu' : ''?>" href="<?= base_url('atasan/useraktif') ?>"><i class="fa fa-user"></i> User Aktif</a>
-                        </li>
+                        </li> -->
                         <li class="<?php if( (current_url() == base_url('atasan/masteruser'))                   || 
                                              (current_url() == base_url('atasan/mastergolongan'))               || 
                                              (current_url() == base_url('atasan/masterjabatan'))                || 

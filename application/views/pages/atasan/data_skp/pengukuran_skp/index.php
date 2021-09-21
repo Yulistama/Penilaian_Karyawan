@@ -483,7 +483,7 @@
                 success: function(data){
                     let kuant_target = JSON.parse(data.tblformulir[0].target_menerima_surat_masuk);
                     let kuant_relasi = $('#kuant_surat_masuk').val();
-                    $('#kual_surat_masuk').val(Number(kuant_relasi) + Number(kuant_target.kuant_surat_masuk) * 100);
+                    $('#kual_surat_masuk').val(Number(kuant_relasi) / Number(kuant_target.kuant_surat_masuk) * 100);
                     
                     let kualitas_surat_masuk = $("#kualitas_surat_masuk").val();
                     let kuantitas_surat_masuk = $("#kuantitas_surat_masuk").val();
@@ -527,9 +527,10 @@
                 async : true,
                 dataType : 'json',
                 success: function(data){
+                    console.log('data', data);
                     let kuant_target = JSON.parse(data.tblformulir[0].target_kode_surat);
                     let kuant_relasi = $('#kuant_kode_surat').val();
-                    $('#kual_kode_surat').val(Number(kuant_relasi) + Number(kuant_target.kuant_kode_surat) * 100);
+                    $('#kual_kode_surat').val(Number(kuant_relasi) / Number(kuant_target.kuant_kode_surat) * 100);
 
                     let kualitas_kode_surat = $("#kualitas_kode_surat").val();
                     let kuantitas_kode_surat = $("#kuantitas_kode_surat").val();
@@ -576,7 +577,7 @@
                 success: function(data){
                     let kuant_target = JSON.parse(data.tblformulir[0].target_memberi_no_agenda);
                     let kuant_relasi = $('#kuant_no_agenda').val();
-                    $('#kual_no_agenda').val(Number(kuant_relasi) + Number(kuant_target.kuant_no_agenda) * 100);
+                    $('#kual_no_agenda').val(Number(kuant_relasi) / Number(kuant_target.kuant_no_agenda) * 100);
 
                     let kualitas_no_agenda = $("#kualitas_no_agenda").val();
                     let kuantitas_no_agenda = $("#kuantitas_no_agenda").val();
@@ -623,7 +624,7 @@
                 success: function(data){
                     let kuant_target = JSON.parse(data.tblformulir[0].target_memberi_no_surat);
                     let kuant_relasi = $('#kuant_no_masuk').val();
-                    $('#kual_no_masuk').val(Number(kuant_relasi) + Number(kuant_target.kuant_no_surat) * 100);
+                    $('#kual_no_masuk').val(Number(kuant_relasi) / Number(kuant_target.kuant_no_surat) * 100);
 
                     let kualitas_no_masuk = $("#kualitas_no_masuk").val();
                     let kuantitas_no_masuk = $("#kuantitas_no_masuk").val();
@@ -671,7 +672,7 @@
                     console.log('datas', data);
                     let kuant_target = JSON.parse(data.tblformulir[0].target_mendistribusikan_surat);
                     let kuant_relasi = $('#kuant_distribusi_surat').val();
-                    $('#kual_distribusi_surat').val(Number(kuant_relasi) + Number(kuant_target.kuant_distribusi_surat) * 100);
+                    $('#kual_distribusi_surat').val(Number(kuant_relasi) / Number(kuant_target.kuant_distribusi_surat) * 100);
 
                     let kualitas_distribusi_surat = $("#kualitas_distribusi_surat").val();
                     let kuantitas_distribusi_surat = $("#kuantitas_distribusi_surat").val();
@@ -718,7 +719,7 @@
                 success: function(data){
                     let kuant_target = JSON.parse(data.tblformulir[0].target_arsipan_surat);
                     let kuant_relasi = $('#kuant_arsipan').val();
-                    $('#kual_arsipan').val(Number(kuant_relasi) + Number(kuant_target.kuant_arsip_surat) * 100);
+                    $('#kual_arsipan').val(Number(kuant_relasi) / Number(kuant_target.kuant_arsip_surat) * 100);
 
                     let kualitas_arsipan = $("#kualitas_arsipan").val();
                     let kuantitas_arsipan = $("#kuantitas_arsipan").val();

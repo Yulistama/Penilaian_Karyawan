@@ -7,13 +7,13 @@
 		  <li><a href="#">Home</a></li>
 		</ol>
         <div class="row">
-            <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="col-md-4 col-sm-12 col-xs-12">
 				<div class="board">
                     <div class="panel panel-primary">
 					    <div class="number">
 					    	<h3>
 					    		<h3>44,023</h3>
-					    		<small>Daily Visits</small>
+					    		<small>Jumlah Karyawan</small>
 					    	</h3> 
 					    </div>
 					    <div class="icon">
@@ -23,13 +23,13 @@
 					</div>
                 </div>
 					
-				<div class="col-md-3 col-sm-12 col-xs-12">
+				<div class="col-md-4 col-sm-12 col-xs-12">
 					<div class="board">
                         <div class="panel panel-primary">
 						    <div class="number">
 						    	<h3>
 						    		<h3>32,850</h3>
-						    		<small>Sales</small>
+						    		<small>Karyawan Sudah Dinilai</small>
 						    	</h3> 
 						    </div>
 						    <div class="icon">
@@ -39,13 +39,13 @@
 					</div>
                 </div>
 					
-				<div class="col-md-3 col-sm-12 col-xs-12">
+				<div class="col-md-4 col-sm-12 col-xs-12">
 					<div class="board">
                         <div class="panel panel-primary">
 						    <div class="number">
 						    	<h3>
 						    		<h3>56,150</h3>
-						    		<small>Comments</small>
+						    		<small>Karyawan Belum Dinilai</small>
 						    	</h3> 
 						    </div>
 						    <div class="icon">
@@ -55,7 +55,7 @@
 					</div>
                 </div>
 					
-				<div class="col-md-3 col-sm-12 col-xs-12">
+				<!-- <div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="board">
                         <div class="panel panel-primary">
 						    <div class="number">
@@ -69,7 +69,7 @@
 						    </div>
                         </div>
 					</div>
-                </div>
+                </div> -->
         </div> 								
     </div>
 </div>

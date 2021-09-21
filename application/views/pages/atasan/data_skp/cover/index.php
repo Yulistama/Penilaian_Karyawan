@@ -113,15 +113,15 @@
                                 <div class="col-md-12" style="border: solid 1px gray; padding:50px">
                                     <form method="post" action="<?= base_url('atasan/dataskp/v_add_cover')?>">
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <!-- <div class="col-md-4">
                                             <b>Kode Jangka Waktu Penilaian </b> 
                                             <input  type="text" name="kode_jangka_penilaian" class="form-control" placeholder="Masukan Kode Jangka Waktu Penilaian" required/>
-                                        </div>
-                                        <div class="col-md-4">
+                                        </div> -->
+                                        <div class="col-md-6">
                                             <b>Jangka Waktu Penilaian </b> 
                                             <input  type="text" name="jangka_waktu" class="form-control" placeholder="Masukan Jangka Waktu Penilaian" required/>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <b>Tahun </b>
                                             <select class="form-control" id="tahun" name="tahun" required>
                                                 <option value="">--Pilih--</option>
